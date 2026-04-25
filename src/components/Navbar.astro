@@ -1,0 +1,126 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const currentPath = Astro.url.pathname;
+
+interface submenu {
+    name: string,
+    href: string,
+}
+
+interface menuList {
+    name: string,
+    href: string,
+    children?: submenu[],
+}
+
+const MenuList: menuList[] = [
+    {name:"Inicio", href:"/"},
+    {name:"Servicios", href:"/Servicios-de-desarrollo-web",
+        children:[
+            {name:"Diseño y desarrollo web", href:"/servicios/diseno-y-desarrollo-web"},
+            {name:"Desarrollo de sistemas web a medida", href:"/servicios/desarrollo-de-sistemas-web-a-medida"},
+            {name:"Mantenimiento web", href:"/mantenimiento-web"},
+        ]
+    },
+    {name:"Proyectos", href:"/nuestros-proyectos-web"},
+    {name:"Nosotros", href:"/sobre-nosotros-kcmsmart"},
+    {name:"Blog", href:"/blog"},
+    {name:"Hablemos", href:"/contactanos"},
+]
+---
+
+<header class="flex flex-col items-center inset-0 fixed overflow-hidden">
+    <div class="w-full bg-primary-light overflow-hidden">
+        <div class="animate-marquee whitespace-nowrap text-center p-2 font-semibold text-sm font-Lexend">
+            <span>🔥Obtén hosting y dominio gratis por 1 año al desarrollar tu sitio web con nosotros &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+            <span>🔥Obtén hosting y dominio gratis por 1 año al desarrollar tu sitio web con nosotros &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+        
+            <span>🔥Obtén hosting y dominio gratis por 1 año al desarrollar tu sitio web con nosotros &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+            <span>🔥Obtén hosting y dominio gratis por 1 año al desarrollar tu sitio web con nosotros &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+        </div>
+    </div>
+    <nav class="w-full max-w-7xl mx-auto flex items-center justify-between px-4 py-3 bg-body">
+        <a href="/">
+            <img src="/logo-kcmsmart.svg" alt="Logo kcmsmart.com" class="w-32 h-auto" />
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex items-center gap-8">
+            {MenuList.map((e) => {
+                const isActivo = e.href === currentPath;
+                const hasChildren = e.children && e.children.length > 0;
+                return (
+                    <li class="relative group font-Lexend uppercase">
+                        <a href={e.href}
+                        class={`${isActivo ? "text-primary-light font-bold" : "text-gray hover:text-primary-light transition-colors duration-300"} flex items-center gap-1`}
+                        >
+                            {e.name}
+                            {hasChildren && (
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            )}
+                        </a>
+                        {hasChildren && (
+                            <ul class="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible hover:overflow-hidden group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                {e.children!.map((child) => (
+                                    <li>
+                                        <a href={child.href} class="block px-4 py-2 text-gray hover:bg-primary-light  hover:font-bold hover:text-primary transition-colors duration-300">
+                                            {child.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                )
+            })}
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden p-2" aria-label="Toggle menu">
+            <Icon name="solar:hamburger-menu-bold" class="text-gray size-8" />
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden w-full bg-primary-light shadow-lg rounded-4xl ">
+        <ul class="flex flex-col p-4 gap-3">
+            {MenuList.map((e) => {
+                const isActivo = e.href === currentPath;
+                const hasChildren = e.children && e.children.length > 0;
+                return (
+                    <li>
+                        <a href={e.href}
+                        class={`${isActivo ? "text-primary font-bold" : "text-black hover:text-primary"} block py-2`}
+                        >
+                            {e.name}
+                        </a>
+                        {hasChildren && (
+                            <ul class="pl-4 mt-2 space-y-2">
+                                {e.children!.map((child) => (
+                                    <li>
+                                        <a href={child.href} class="text-sm text-gray-dark hover:text-primary">
+                                            {child.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                )
+            })}
+        </ul>
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+        menuToggle?.classList.add('text-white')
+    });
+</script>

@@ -12,6 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.9"
+    "@fontsource-variable/lexend": "^5.2.11",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.9",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.2.4",
+    "@iconify-json/solar": "^1.2.5"
   }
 }
