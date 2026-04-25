@@ -1,0 +1,13 @@
+---
+import videohero from '../assets/video_hero.webm'
+import videohero2 from '../assets/video_hero.mp4'
+---
+
+<div class="max-w-7xl mx-auto p-5 mt-32 ">
+    <div class="w-fit p-3 lg:p-12 bg-linear-to-br from-primary-light to-primary rounded-4xl lg:rounded-[64px] backdrop-blur">
+        <video autoplay loop muted class="w-full rounded-3xl">
+            <source src={videohero} type="video/webm">
+            <source src={videohero2} type="video/mp4">
+        </video>
+    </div>
+</div>

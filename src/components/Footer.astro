@@ -5,11 +5,11 @@ import { Image } from "astro:assets";
 import { date } from 'astro:schema';
 ---
 
-<footer role="contentinfo" class="relative max-w-7xl mx-auto px-4 flex flex-col  overflow-hidden">
+<footer class="relative max-w-7xl mx-auto px-4 flex flex-col  overflow-hidden">
     <img 
-    src="/bg-footer.svg" 
-    class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none"
-    alt="bg"
+        src="/bg-footer.svg" 
+        class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none"
+        alt="bg"
     />
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-12 mt-32">
         <section class="flex flex-col gap-4">
@@ -123,6 +123,6 @@ import { date } from 'astro:schema';
     </div>
 
     <div class="mt-8 text-center">
-        <p class="text-gray-dark text-sm font-Lexend">©KCMSMART {new Date().getFullYear()} | <a href="/politica-de-privacidad">POLÍTICA DE PRIVACIDAD</a></p>
+        <p class="text-gray text-sm font-Lexend">©KCMSMART {new Date().getFullYear()}  | <a href="/politica-de-privacidad">POLÍTICA DE PRIVACIDAD</a></p>
     </div>
 </footer>

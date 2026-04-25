@@ -1,0 +1,106 @@
+---
+import { Icon } from "astro-icon/components";
+import imgServicio1 from '../assets/img-servicio-1.png';
+import imgServicio2 from '../assets/img-servicio-2.png';
+import imgServicio3 from '../assets/img-servicio-3.png';
+---
+
+<div class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
+    <section class="flex flex-col gap-4">
+        <h2 class="font-Anton text-3xl leading-12 
+        bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+         bg-size-[300%_300%]
+         bg-clip-text text-transparent
+         animate-gradiente">
+            NUESTROS SERVICIOS
+        </h2>
+        <p class="max-w-2xl font-Lexend text-gray text-base leading-relaxed">
+            Ofrecemos soluciones digitales diseñadas para potenciar tu negocio, 
+            desde sitios web modernos hasta sistemas personalizados que optimizan tus procesos y 
+            mejoran tu presencia online.
+        </p>
+
+        <div class="mx-auto grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            
+            <section class=" flex flex-col gap-4 group ">
+                
+                <div class="overflow-hidden rounded-4xl">
+                    <img 
+                        src={imgServicio1.src} 
+                        alt="imagen servicio 1"
+                        class="w-full h-full object-cover transition-all duration-700  group-hover:scale-105"
+                    >
+                </div>
+                <h3 class="font-Anton text-2xl text-gray group-hover:text-primary-light">
+                    Diseño y desarrollo web
+                </h3>
+                <p class="font-Lexend text-gray text-base">
+                    Creamos sitios web modernos, rápidos y optimizados para todos los dispositivos, 
+                    enfocados en atraer clientes y mejorar la presencia digital de tu negocio.
+                </p>
+
+                <a href="" class="font-Anton text-gray p-3 flex gap-5 items-center rounded-4xl
+                group-hover:bg-primary-light group-hover:text-black transition-transform duration-700 ease-in-out  ">
+                    SABER MÁS...
+                     <Icon name="icon-park-outline:arrow-right-up" class="size-7  group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+                </a>
+            </section>
+
+             <section class=" flex flex-col gap-4 group ">
+                
+                <div class="overflow-hidden rounded-4xl">
+                    <img 
+                        src={imgServicio2.src} 
+                        alt="imagen servicio 1"
+                        class="w-full h-full object-cover transition-all duration-700  group-hover:scale-105"
+                    >
+                </div>
+                <h3 class="font-Anton text-2xl text-gray group-hover:text-primary-light">
+                    Desarrollo de sistemas web
+                </h3>
+                <p class="font-Lexend text-gray text-base">
+                    Desarrollamos soluciones personalizadas como dashboards, sistemas de gestión, paneles administrativos 
+                    y plataformas web adaptadas a las necesidades específicas de tu empresa.
+                </p>
+
+                <a href="" class="font-Anton text-gray p-3 flex gap-5 items-center rounded-4xl
+                group-hover:bg-primary-light group-hover:text-black transition-transform duration-700 ease-in-out  ">
+                    SABER MÁS...
+                     <Icon name="icon-park-outline:arrow-right-up" class="size-7  group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+                </a>
+            </section>
+
+
+
+             <section class=" flex flex-col gap-4 group ">
+                
+                <div class="overflow-hidden rounded-4xl">
+                    <img 
+                        src={imgServicio3.src} 
+                        alt="imagen servicio 1"
+                        class="w-full h-full object-cover transition-all duration-700  group-hover:scale-105"
+                    >
+                </div>
+                <h3 class="font-Anton text-2xl text-gray group-hover:text-primary-light">
+                    Mantenimiento web
+                </h3>
+                <p class="font-Lexend text-gray text-base">
+                    Nos encargamos de la actualización, optimización y seguridad de tu sitio web para garantizar
+                     su correcto funcionamiento y mantenerlo siempre al día.
+                </p>
+
+                <a href="" class="font-Anton text-gray p-3 flex gap-5 items-center rounded-4xl
+                group-hover:bg-primary-light group-hover:text-black transition-transform duration-700 ease-in-out  ">
+                    SABER MÁS...
+                     <Icon name="icon-park-outline:arrow-right-up" class="size-7  group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+                </a>
+            </section>
+
+
+
+     
+         
+        </div>
+    </section>
+
+</div>
