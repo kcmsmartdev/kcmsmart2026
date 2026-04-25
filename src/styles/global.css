@@ -1,22 +1,6 @@
 @import "tailwindcss";
 @import '@fontsource-variable/lexend/wght.css';
-
-@font-face {
-    font-family: 'ThunderBold';
-    src: url('../assets/fonts/Thunder-BoldLC.ttf') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-@font-face {
-    font-family: 'ThunderExtraBold';
-    src: url('../assets/fonts/Thunder-ExtraBoldLC.ttf') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
+@import '@fontsource/anton';
 
 
 @theme {
@@ -32,10 +16,11 @@
   --color-body: #1E1E1E;
 
 
-  --animate-marquee: marquee 20s linear infinite;
   --font-Lexend: 'Lexend Variable', sans-serif;
-  --font-ThunderBold: 'ThunderBold', sans-serif;
-  --font-ThunderExtraBold: 'ThunderExtraBold', sans-serif;
+  --font-Anton: 'Anton', sans-serif;
+  
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-gradiente: gradiente 5s ease infinite;
 }
 
 @keyframes marquee {
@@ -47,3 +32,11 @@
   }
 }
 
+@keyframes gradiente {
+  0%, 100%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+}

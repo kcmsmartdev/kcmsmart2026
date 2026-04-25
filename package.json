@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fontsource-variable/lexend": "^5.2.11",
+    "@fontsource/anton": "^5.2.7",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.1.9",
     "astro-icon": "^1.1.5",
