@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@iconify-json/ic": "^1.2.4",
+    "@iconify-json/icon-park-outline": "^1.2.4",
     "@iconify-json/solar": "^1.2.5"
   }
 }

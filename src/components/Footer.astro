@@ -1,5 +1,122 @@
 ---
+import { Icon } from 'astro-icon/components';
 import bgFooter from "/bg-footer.svg"
 import { Image } from "astro:assets";
+import { date } from 'astro:schema';
 ---
 
+<footer class="relative max-w-7xl mx-auto px-4 flex flex-col  overflow-hidden">
+    <img 
+    src="/bg-footer.svg" 
+    class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none"
+    alt="bg"
+    />
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-12 mt-32">
+        <section class="flex flex-col gap-4">
+            <a href="/">
+                <img src="/logo-kcmsmart.svg" alt="Logo kcmsmart.com" class="w-20 lg:w-32 h-auto" />
+            </a>
+            <p class="text-base text-gray max-w-2xs font-Lexend font-medium">
+                Servicio de diseño y desarrollo web integral para tu negocio
+            </p>
+            <div class="flex gap-8">
+                <Icon name="icon-park-outline:instagram" class="text-gray size-7" />
+                <Icon name="icon-park-outline:big-x"  class="text-gray size-7"/>
+                <Icon name="icon-park-outline:facebook" class="text-gray size-7"/>
+                <Icon name="icon-park-outline:tiktok" class="text-gray size-7"/>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            
+            <h2 class=" text-gray  font-Anton  text-lg ">
+                INFO
+            </h2>
+            <li class="flex flex-col gap-3">
+
+                <a href="mailto:contacto@kcmsmart.com"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    contacto@kcmsmart.com
+                </a>
+
+                <a href="https://api.whatsapp.com/send/?phone=51986940516&text=Hola%2C+estoy+interesado+en+desarrollar+una+p%C3%A1gina+web+para+mi+negocio+y+me+gustar%C3%ADa+recibir+una+asesor%C3%ADa.&type=phone_number&app_absent=0"
+                target="_blank"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    +51 986 940 516
+                </a>
+                <a href="/contactanos"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Formulario
+                </a>
+            </li>
+        </section>
+
+         <section class="flex flex-col gap-4">
+            
+            <h2 class=" text-gray  font-Anton  text-lg ">
+                AGENCIA
+            </h2>
+            <li class="flex flex-col gap-3">
+
+                <a href="/sobre-nosotros-kcmsmart"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Sobre nosotros
+                </a>
+
+
+
+                <a href="/desarrollo-de-sistemas-web-a-medida"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Proyectos
+                </a>
+                
+                
+                <a href="/mantenimiento-web"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Blog
+                </a>
+
+                <a href="/mantenimiento-web"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Herramientas de trabajo
+                </a>
+                
+             
+            </li>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            
+            <h2 class=" text-gray  font-Anton  text-lg ">
+                SERVICIOS
+            </h2>
+            <li class="flex flex-col gap-3">
+
+                <a href="/diseno-y-desarrollo-web"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Diseño  y desarrollo  web
+                </a>
+
+
+
+                <a href="/desarrollo-de-sistemas-web-a-medida"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Desarrollo de sistemas web a medida
+                </a>
+                
+                
+                <a href="/mantenimiento-web"
+                class="text-sm text-white font-Lexend hover:text-primary-light">
+                    Mantenimiento web
+                </a>
+                
+             
+            </li>
+        </section>
+
+    </div>
+
+    <div class="mt-8 text-center">
+        <p class="text-gray-dark text-sm font-Lexend">©KCMSMART {new Date().getFullYear()} | <a href="/politica-de-privacidad">POLÍTICA DE PRIVACIDAD</a></p>
+    </div>
+</footer>
