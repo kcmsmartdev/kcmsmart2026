@@ -30,7 +30,7 @@ const MenuList: menuList[] = [
 ]
 ---
 
-<header class="flex flex-col items-center fixed top-0 left-0 w-full z-50 overflow-hidden">
+<header class="flex flex-col items-center fixed top-0 left-0 w-full z-50">
     <div class="w-full bg-primary-light overflow-hidden">
         <div class="animate-marquee whitespace-nowrap text-center p-2 font-light text-sm font-Lexend sm:animate-none">
 
@@ -40,7 +40,7 @@ const MenuList: menuList[] = [
     </div>
     <nav class="w-full max-w-7xl mx-auto flex items-center justify-between px-4 py-3 bg-body">
         <a href="/">
-            <img src="/logo-kcmsmart.svg" alt="Logo kcmsmart.com" class="w-20 lg:w-32 h-auto" />
+            <img src="/logo-kcmsmart.svg" alt="Logo kcmsmart.com" class="w-20 lg:w-32 h-auto" width="128" height="36" />
         </a>
 
         <!-- Desktop Menu -->
@@ -61,7 +61,7 @@ const MenuList: menuList[] = [
                             )}
                         </a>
                         {hasChildren && (
-                            <ul class="absolute top-full left-0 mt-2 w-fit bg-white shadow-lg border-4 border-primary rounded-lg opacity-0 invisible hover:overflow-hidden group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <ul class="absolute top-full left-0 mt-2 w-fit bg-white shadow-lg border-4 border-primary rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                                 {e.children!.map((child) => (
                                     <li>
                                         <a href={child.href} class="block px-7  py-4 text-black hover:bg-primary-light  hover:font-bold hover:text-primary transition-all ease-in-out  duration-300">
@@ -119,6 +119,6 @@ const MenuList: menuList[] = [
 
     menuToggle?.addEventListener('click', () => {
         mobileMenu?.classList.toggle('hidden');
-        menuToggle?.classList.add('text-white')
+        
     });
 </script>
