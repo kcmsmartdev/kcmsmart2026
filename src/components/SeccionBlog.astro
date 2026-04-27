@@ -1,0 +1,112 @@
+---
+// Blog.astro
+import { Icon } from 'astro-icon/components'
+
+import imgBlog1 from '../assets/blog/img-proyecto-1.png'
+import imgBlog2 from '../assets/blog/img-proyecto-1.png'
+import imgBlog3 from '../assets/blog/img-proyecto-1.png'
+
+const articulos = [
+  {
+    tag: "SEO",
+    fecha: "12 may 2025",
+    titulo: "Cómo posicionar tu negocio en Google sin pagar publicidad",
+    extracto: "Las estrategias de SEO que realmente funcionan para negocios locales en Perú y Latinoamérica.",
+    href: "/blog/seo-sin-publicidad",
+    img: imgBlog1,
+  },
+  {
+    tag: "Desarrollo web",
+    fecha: "3 may 2025",
+    titulo: "¿Por qué tu sitio web carga lento y cómo solucionarlo?",
+    extracto: "Velocidad de carga, Core Web Vitals y los errores más comunes que afectan la experiencia del usuario.",
+    href: "/blog/sitio-web-lento",
+    img:imgBlog2,
+  },
+  {
+    tag: "Diseño",
+    fecha: "24 abr 2025",
+    titulo: "Diseño web que convierte: lo que tu competencia no te cuenta",
+    extracto: "Principios de UX que hacen que los visitantes se conviertan en clientes reales.",
+    href: "/blog/diseno-que-convierte",
+    img:imgBlog3,
+  },
+]
+---
+
+<div class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
+  <section class="flex flex-col gap-3 items-center">
+
+    <h2 class="text-2xl font-Anton text-center text-white mb-4">
+    ARTÍCULOS DEL BLOG
+  </h2>
+    <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed text-center">
+      Consejos, guías y tendencias sobre diseño web, desarrollo y posicionamiento digital
+      para hacer crecer tu negocio.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-6 mt-16">
+
+      {articulos.map((art) => (
+        <section class="flex flex-col gap-4 group">
+
+          <!-- Thumbnail -->
+          <div class="overflow-hidden rounded-4xl group-hover:rounded-4xl transition-all duration-300 ease-in-out relative">
+            <img
+              src={art.img.src}
+              alt={art.titulo}
+              class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <span class="absolute top-3 left-3 font-Anton text-xs px-3 py-1 rounded-full bg-primary text-primary-light">
+              {art.tag}
+            </span>
+          </div>
+
+          <!-- Meta -->
+          <div class="flex items-center gap-2 font-Lexend text-xs text-gray-dark">
+            <span>{art.fecha}</span>
+            <span class="w-1 h-1 rounded-full bg-gray-dark"></span>
+            
+          </div>
+
+          <!-- Título -->
+          <h3 class="font-Anton text-2xl text-gray group-hover:text-primary-light transition-colors duration-300">
+            {art.titulo}
+          </h3>
+
+          <!-- Extracto -->
+          <p class="font-Lexend text-gray text-base leading-relaxed">
+            {art.extracto}
+          </p>
+
+          <!-- Botón -->
+          <a href={art.href}
+            class="font-Anton text-gray p-3 flex gap-5 items-center rounded-2xl
+            group-hover:rounded-4xl border-2 border-gray-dark
+            group-hover:border-transparent group-hover:bg-primary-light group-hover:text-black
+            transition-all duration-700 ease-in-out">
+            LEER ARTÍCULO...
+            <Icon
+              name="icon-park-outline:arrow-right-up"
+              class="size-7 group-hover:rotate-45 transition-transform duration-500 ease-in-out"
+            />
+          </a>
+
+        </section>
+      ))}
+
+    </div>
+
+    <!-- Ver todos -->
+    <div class="flex justify-end mt-6">
+      <a href="/blog"
+        class="font-Anton text-gray-dark text-sm flex items-center gap-2
+        group
+        hover:text-primary-light transition-colors duration-300">
+        VER TODOS LOS ARTÍCULOS
+        <Icon name="icon-park-outline:arrow-right-up" class="size-4 group-hover:rotate-45 transition-transform duration-300 ease-in-out " />
+      </a>
+    </div>
+
+  </section>
+</div>

@@ -1,0 +1,83 @@
+---
+// FAQ.astro
+const faqs = [
+  {
+    num: "01",
+    pregunta: "¿Cuánto tiempo demora el desarrollo?",
+    respuesta: "El tiempo varía según la complejidad del proyecto. Un sitio web estándar puede estar listo en 2 a 4 semanas. Proyectos más complejos pueden tomar entre 6 y 12 semanas. Te damos un plazo estimado antes de comenzar."
+  },
+  {
+    num: "02",
+    pregunta: "¿Debo pagar el monto total al inicio?",
+    respuesta: "No. Manejamos pagos por etapas: un adelanto inicial, un pago al aprobar el diseño y el saldo al entregar el proyecto terminado."
+  },
+  {
+    num: "03",
+    pregunta: "¿Qué medios de pago aceptas?",
+    respuesta: "Aceptamos transferencias bancarias, Yape, Plin y efectivo. Para clientes en el extranjero también PayPal y transferencias internacionales."
+  },
+  {
+    num: "04",
+    pregunta: "¿Con qué tecnología trabajas?",
+    respuesta: "Desarrollamos con Astro, React, Tailwind CSS y TypeScript en el frontend. En el backend usamos Node.js con PostgreSQL o Supabase."
+  },
+  {
+    num: "05",
+    pregunta: "¿El sitio será optimizado para móviles?",
+    respuesta: "Sí, todos nuestros proyectos son 100% responsive. Diseñamos mobile-first garantizando una experiencia óptima en cualquier dispositivo."
+  },
+];
+---
+
+<section class="py-16 px-4 max-w-3xl mx-auto">
+  <h2 class="text-2xl font-Anton text-center text-white mb-10">
+    Preguntas frecuentes
+  </h2>
+
+  <div class="flex flex-col gap-3">
+    {faqs.map((faq) => (
+      <div class="faq-item border border-white/10 rounded-2xl bg-[#1f1f1f] overflow-hidden transition-all duration-300">
+        <button class="faq-btn w-full flex items-center gap-4 px-5 py-4 text-left">
+          <span class="text-primary-light font-Anton text-sm min-w-6">{faq.num}</span>
+          <span class="flex-1 text-white font-medium text-sm lg:text-base">{faq.pregunta}</span>
+          <span class="faq-icon w-7 h-7 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-300">
+            <svg viewBox="0 0 14 14" fill="none" class="w-3.5 h-3.5 stroke-gray-400 transition-all duration-300">
+              <path d="M7 2v10M2 7h10" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5">
+          <p class="text-gray-400 text-sm leading-relaxed border-l-2 border-primary pl-4 pb-5">
+            {faq.respuesta}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-btn')!;
+    const body = item.querySelector('.faq-body') as HTMLElement;
+    const icon = item.querySelector('.faq-icon')!;
+
+    btn.addEventListener('click', () => {
+      const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+
+      // Cierra todos
+      document.querySelectorAll('.faq-item').forEach(i => {
+        (i.querySelector('.faq-body') as HTMLElement).style.maxHeight = '0px';
+        i.querySelector('.faq-icon')!.classList.remove('bg-primary', 'border-primary', 'rotate-45');
+        i.classList.remove('border-primary');
+      });
+
+      // Abre el actual si estaba cerrado
+      if (!isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        icon.classList.add('bg-primary', 'border-primary', 'rotate-45');
+        item.classList.add('border-primary');
+      }
+    });
+  });
+</script>
