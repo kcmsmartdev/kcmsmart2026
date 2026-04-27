@@ -1,7 +1,291 @@
 ---
-
+import { Icon } from 'astro-icon/components'
+import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
 ---
 
 <div class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
+  <section class="flex flex-col gap-3">
+    <h2 class="font-Anton text-3xl leading-12 
+      bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+      bg-size-[300%_300%] bg-clip-text text-transparent animate-gradiente">
+      NUESTROS PROYECTOS
+    </h2>
+    <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed">
+      Una web bien hecha, moderna, rápida y optimizada para mostrar lo que ofreces.
+    </p>
+  </section>
 
+  <!-- Wrapper: en mobile columna de filas, en desktop una sola fila -->
+  <div class="flex flex-col md:flex-row gap-3 mt-16 md:h-145" id="projects-container">
+
+    <!-- Fila 1 (mobile/tablet) -->
+    <div class="flex flex-row gap-3 md:h-auto md:contents" data-row>
+
+      <!-- Tarjeta 1 -->
+      <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
+        <img
+          src={proyecto1.src}
+          alt="Proyecto Cuotitas"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
+        />
+        <div
+          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          data-grid
+          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
+        >
+          <div
+            class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
+            data-content
+          >
+            <div class="flex flex-col gap-3">
+              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
+              <p class="text-gray font-Lexend text-sm leading-relaxed">
+                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-white/85 text-xs font-Anton">Astro</span>
+              <span class="text-white/85 text-xs font-Anton">Tailwind</span>
+              <span class="text-white/85 text-xs font-Anton">TypeScript</span>
+            </div>
+            <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
+              SABER MÁS...
+              <Icon name="icon-park-outline:arrow-right-up" class="size-4 lg:size-6 group-hover:rounded-4xl group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+            </a>
+          </div>
+          <div class="overflow-hidden h-full order-1 md:order-2" data-image-col>
+            <img src={proyecto1.src} alt="..." class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+     <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
+        <img
+          src={proyecto1.src}
+          alt="Proyecto Cuotitas"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
+        />
+        <div
+          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          data-grid
+          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
+        >
+          <div
+            class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
+            data-content
+          >
+            <div class="flex flex-col gap-3">
+              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
+              <p class="text-gray font-Lexend text-sm leading-relaxed">
+                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-white/85 text-xs font-Anton">Astro</span>
+              <span class="text-white/85 text-xs font-Anton">Tailwind</span>
+              <span class="text-white/85 text-xs font-Anton">TypeScript</span>
+            </div>
+            <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
+              SABER MÁS...
+              <Icon name="icon-park-outline:arrow-right-up" class="size-4 lg:size-6 group-hover:rounded-4xl group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+            </a>
+          </div>
+          <div class="overflow-hidden h-full order-1 md:order-2" data-image-col>
+            <img src={proyecto1.src} alt="..." class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Fila 2 (mobile/tablet) -->
+    <div class="flex flex-row gap-3  md:h-auto md:contents" data-row>
+
+     <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
+        <img
+          src={proyecto1.src}
+          alt="Proyecto Cuotitas"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
+        />
+        <div
+          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          data-grid
+          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
+        >
+          <div
+            class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
+            data-content
+          >
+            <div class="flex flex-col gap-3">
+              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
+              <p class="text-gray font-Lexend text-sm leading-relaxed">
+                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-white/85 text-xs font-Anton">Astro</span>
+              <span class="text-white/85 text-xs font-Anton">Tailwind</span>
+              <span class="text-white/85 text-xs font-Anton">TypeScript</span>
+            </div>
+            <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
+              SABER MÁS...
+              <Icon name="icon-park-outline:arrow-right-up" class="size-4 lg:size-6 group-hover:rounded-4xl group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+            </a>
+          </div>
+          <div class="overflow-hidden h-full order-1 md:order-2" data-image-col>
+            <img src={proyecto1.src} alt="..." class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
+        <img
+          src={proyecto1.src}
+          alt="Proyecto Cuotitas"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
+        />
+        <div
+          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          data-grid
+          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
+        >
+          <div
+            class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
+            data-content
+          >
+            <div class="flex flex-col gap-3">
+              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
+              <p class="text-gray font-Lexend text-sm leading-relaxed">
+                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-white/85 text-xs font-Anton">Astro</span>
+              <span class="text-white/85 text-xs font-Anton">Tailwind</span>
+              <span class="text-white/85 text-xs font-Anton">TypeScript</span>
+            </div>
+            <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
+              SABER MÁS...
+              <Icon name="icon-park-outline:arrow-right-up" class="size-4 lg:size-6 group-hover:rounded-4xl group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+            </a>
+          </div>
+          <div class="overflow-hidden h-full order-1 md:order-2" data-image-col>
+            <img src={proyecto1.src} alt="..." class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
 </div>
+
+<script>
+  const container = document.getElementById('projects-container');
+  const rows = container?.querySelectorAll('[data-row]');
+  const allCards = container?.querySelectorAll('[data-card]');
+
+  function isMobile() {
+    return window.innerWidth < 768;
+  }
+
+  function setActive(activeCard: Element | null) {
+    if (isMobile()) {
+      // En mobile/tablet: acordeón horizontal por fila
+      rows?.forEach(row => {
+        const rowCards = row.querySelectorAll('[data-card]');
+        rowCards.forEach(card => {
+          const isActive = card === activeCard;
+          const el = card as HTMLElement;
+
+          el.classList.remove('flex-[1]', 'flex-[2]', 'flex-[5]');
+          el.classList.add(isActive ? 'flex-[5]' : 'flex-[1]');
+
+          const grid = el.querySelector('[data-grid]') as HTMLElement;
+          const content = el.querySelector('[data-content]') as HTMLElement;
+
+          if (isActive) {
+            el.dataset.active = 'true';
+            if (content) content.dataset.active = 'true';
+            if (grid) {
+              grid.dataset.active = 'true';
+              grid.style.gridTemplateColumns = '1fr 1fr';
+              grid.style.gridTemplateRows = '1fr';
+            }
+          } else {
+            delete el.dataset.active;
+            if (content) delete content.dataset.active;
+            if (grid) {
+              delete grid.dataset.active;
+              grid.style.gridTemplateColumns = '1fr 0px';
+              grid.style.gridTemplateRows = '1fr';
+            }
+          }
+        });
+      });
+
+    } else {
+      // En desktop: acordeón horizontal global con las 4 cards
+      allCards?.forEach(card => {
+        const isActive = card === activeCard;
+        const el = card as HTMLElement;
+
+        el.classList.remove('flex-[1]', 'flex-[2]', 'flex-[5]');
+        el.classList.add(isActive ? 'flex-[5]' : 'flex-[1]');
+
+        const grid = el.querySelector('[data-grid]') as HTMLElement;
+        const content = el.querySelector('[data-content]') as HTMLElement;
+
+        if (isActive) {
+          el.dataset.active = 'true';
+          if (content) content.dataset.active = 'true';
+          if (grid) {
+            grid.dataset.active = 'true';
+            grid.style.gridTemplateColumns = '1fr 1fr';
+            grid.style.gridTemplateRows = '1fr';
+          }
+        } else {
+          delete el.dataset.active;
+          if (content) delete content.dataset.active;
+          if (grid) {
+            delete grid.dataset.active;
+            grid.style.gridTemplateColumns = '1fr 0px';
+            grid.style.gridTemplateRows = '1fr';
+          }
+        }
+      });
+    }
+  }
+
+  // Activar primera card de cada fila al inicio
+  if (isMobile()) {
+    rows?.forEach(row => {
+      const firstCard = row.querySelector('[data-card]');
+      if (firstCard) setActive(firstCard);
+    });
+  } else {
+    const firstCard = allCards?.[0];
+    if (firstCard) setActive(firstCard);
+  }
+
+  allCards?.forEach(card => {
+    card.addEventListener('mouseenter', () => setActive(card));
+    card.addEventListener('click', () => setActive(card));
+  });
+
+  window.addEventListener('resize', () => {
+    if (isMobile()) {
+      rows?.forEach(row => {
+        const activeCard = row.querySelector('[data-card][data-active="true"]') 
+          || row.querySelector('[data-card]');
+        if (activeCard) setActive(activeCard);
+      });
+    } else {
+      const activeCard = container?.querySelector('[data-card][data-active="true"]') 
+        || allCards?.[0];
+      if (activeCard) setActive(activeCard as Element);
+    }
+  });
+</script>
