@@ -19,7 +19,7 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
   <div class="flex flex-col md:flex-row gap-3 mt-16 md:h-145" id="projects-container">
 
     <!-- Fila 1 (mobile/tablet) -->
-    <div class="flex flex-row gap-3 md:h-auto md:contents" data-row>
+    <div class="flex flex-col gap-3 md:flex-row md:h-auto md:contents" data-row>
 
       <!-- Tarjeta 1 -->
       <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
@@ -29,9 +29,9 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
         />
         <div
-          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          class="absolute inset-0 grid opacity-100 md:opacity-0 md:data-[active=true]:opacity-100 transition-opacity duration-300
+                grid-cols-1 md:[grid-template-columns:1fr_0px]"
           data-grid
-          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
         >
           <div
             class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
@@ -67,9 +67,9 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
         />
         <div
-          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          class="absolute inset-0 grid opacity-100 md:opacity-0 md:data-[active=true]:opacity-100 transition-opacity duration-300
+                grid-cols-1 md:[grid-template-columns:1fr_0px]"
           data-grid
-          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
         >
           <div
             class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
@@ -100,7 +100,7 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
     </div>
 
     <!-- Fila 2 (mobile/tablet) -->
-    <div class="flex flex-row gap-3  md:h-auto md:contents" data-row>
+    <div class="flex flex-col gap-3 md:flex-row md:h-auto md:contents" data-row>
 
      <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
         <img
@@ -109,9 +109,9 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
         />
         <div
-          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          class="absolute inset-0 grid opacity-100 md:opacity-0 md:data-[active=true]:opacity-100 transition-opacity duration-300
+                grid-cols-1 md:[grid-template-columns:1fr_0px]"
           data-grid
-          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
         >
           <div
             class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
@@ -139,7 +139,6 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
         </div>
       </div>
 
-
       <div class="relative h-145 overflow-hidden rounded-xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
         <img
           src={proyecto1.src}
@@ -147,9 +146,9 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
         />
         <div
-          class="absolute inset-0 grid opacity-0 data-[active=true]:opacity-100 transition-opacity duration-300"
+          class="absolute inset-0 grid opacity-100 md:opacity-0 md:data-[active=true]:opacity-100 transition-opacity duration-300
+                grid-cols-1 md:[grid-template-columns:1fr_0px]"
           data-grid
-          style="grid-template-columns: 1fr 0px; grid-template-rows: 1fr; transition-property: opacity, grid-template-columns, grid-template-rows; transition-duration: 300ms, 500ms, 500ms; align-items: stretch;"
         >
           <div
             class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
@@ -177,6 +176,7 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
         </div>
       </div>
       
+      
     </div>
 
   </div>
@@ -193,40 +193,27 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.png'
 
   function setActive(activeCard: Element | null) {
     if (isMobile()) {
-      // En mobile/tablet: acordeón horizontal por fila
-      rows?.forEach(row => {
-        const rowCards = row.querySelectorAll('[data-card]');
-        rowCards.forEach(card => {
-          const isActive = card === activeCard;
-          const el = card as HTMLElement;
+  // 🔥 MOBILE: NO acordeón
+  allCards?.forEach(card => {
+    const el = card as HTMLElement;
 
-          el.classList.remove('flex-[1]', 'flex-[2]', 'flex-[5]');
-          el.classList.add(isActive ? 'flex-[5]' : 'flex-[1]');
+    el.classList.remove('flex-[1]', 'flex-[2]', 'flex-[5]');
+    el.classList.add('flex-none'); // o simplemente nada
 
-          const grid = el.querySelector('[data-grid]') as HTMLElement;
-          const content = el.querySelector('[data-content]') as HTMLElement;
+    const grid = el.querySelector('[data-grid]');
+    const content = el.querySelector('[data-content]');
 
-          if (isActive) {
-            el.dataset.active = 'true';
-            if (content) content.dataset.active = 'true';
-            if (grid) {
-              grid.dataset.active = 'true';
-              grid.style.gridTemplateColumns = '1fr 1fr';
-              grid.style.gridTemplateRows = '1fr';
-            }
-          } else {
-            delete el.dataset.active;
-            if (content) delete content.dataset.active;
-            if (grid) {
-              delete grid.dataset.active;
-              grid.style.gridTemplateColumns = '1fr 0px';
-              grid.style.gridTemplateRows = '1fr';
-            }
-          }
-        });
-      });
+    // 🔥 Mostrar SIEMPRE contenido en mobile
+    el.dataset.active = 'true';
+    if (content) content.dataset.active = 'true';
+    if (grid) {
+      grid.dataset.active = 'true';
+      (grid as HTMLElement).style.gridTemplateColumns = '1fr';
+    }
+  });
 
-    } else {
+  return; // ⛔ importante: salir aquí
+} else {
       // En desktop: acordeón horizontal global con las 4 cards
       allCards?.forEach(card => {
         const isActive = card === activeCard;
