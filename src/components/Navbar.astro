@@ -1,11 +1,16 @@
 ---
 import { Icon } from 'astro-icon/components';
+import imgServicio1 from "../assets/img-servicio-1.png"
+import imgServicio2 from "../assets/img-servicio-2.png"
+import imgServicio3 from "../assets/img-servicio-3.png"
+import { check } from 'astro:schema';
 
 const currentPath = Astro.url.pathname;
 
 interface submenu {
     name: string,
     href: string,
+    img: ImageMetadata,
 }
 
 interface menuList {
@@ -18,9 +23,9 @@ const MenuList: menuList[] = [
     {name:"Inicio", href:"/"},
     {name:"Servicios", href:"/Servicios-de-desarrollo-web",
         children:[
-            {name:"Diseño y desarrollo web", href:"/servicios/diseno-y-desarrollo-web"},
-            {name:"Desarrollo de sistemas web a medida", href:"/servicios/desarrollo-de-sistemas-web-a-medida"},
-            {name:"Mantenimiento web", href:"/mantenimiento-web"},
+            {name:"Diseño y desarrollo web", href:"/servicios/diseno-y-desarrollo-web",  img: imgServicio1,},
+            {name:"Desarrollo de sistemas web a medida", href:"/servicios/desarrollo-de-sistemas-web-a-medida", img: imgServicio2,},
+            {name:"Mantenimiento web", href:"/mantenimiento-web",  img: imgServicio3,},
         ]
     },
     {name:"Proyectos", href:"/nuestros-proyectos-web"},
@@ -60,14 +65,22 @@ const MenuList: menuList[] = [
                                 </svg>
                             )}
                         </a>
+
+
+
                         {hasChildren && (
-                            <ul class="absolute top-full left-0 mt-2 w-fit bg-white shadow-lg border-4 border-primary rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <ul class="absolute top-full left-0 mt-2 w-150 bg-[#1a1a1a] shadow-lg  rounded-lg  invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                
                                 {e.children!.map((child) => (
-                                    <li>
-                                        <a href={child.href} class="block px-7  py-4 text-black hover:bg-primary-light  hover:font-bold hover:text-primary transition-all ease-in-out  duration-300">
-                                            {child.name}
-                                        </a>
-                                    </li>
+                                    <div class="flex flex-flex gap-1 items-center p-5">
+                                        <img src={child.img.src} alt={child.name}
+                                        class="h-20 w-auto rounded-sm hover:scale-105 transition-transform duration-300 ease-in-out">
+                                        <li >
+                                            <a href={child.href} class="block px-7  py-4 text-gray text-base font-Lexend leading-tight hover:font-bold hover:text-primary-light transition-all ease-in-out  duration-300">
+                                                {child.name}
+                                            </a>
+                                         </li>
+                                    </div>
                                 ))}
                             </ul>
                         )}
@@ -83,7 +96,7 @@ const MenuList: menuList[] = [
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden w-full bg-primary-light shadow-lg rounded-4xl ">
+    <div id="mobile-menu" class="hidden lg:hidden w-full bg-[#1a1a1a] shadow-lg rounded-4xl ">
         <ul class="flex flex-col p-4 gap-3">
             {MenuList.map((e) => {
                 const isActivo = e.href === currentPath;
@@ -91,18 +104,22 @@ const MenuList: menuList[] = [
                 return (
                     <li>
                         <a href={e.href}
-                        class={`${isActivo ? "text-primary font-bold" : "text-black hover:text-primary"} block py-2`}
+                        class={`${isActivo ? "text-primary-light font-bold" : "text-gray hover:text-primary"} block py-2`}
                         >
                             {e.name}
                         </a>
                         {hasChildren && (
-                            <ul class="pl-4 mt-2 space-y-2">
+                            <ul class="pl-4">
                                 {e.children!.map((child) => (
-                                    <li>
-                                        <a href={child.href} class="text-sm text-gray-dark hover:text-primary">
-                                            {child.name}
-                                        </a>
-                                    </li>
+                                    <div class="flex flex-flex gap-1 items-center mt-1">
+                                        <img src={child.img.src} alt={child.name}
+                                        class="h-10 w-auto rounded-sm hover:scale-105 transition-transform duration-300 ease-in-out">
+                                        <li >
+                                            <a href={child.href} class="block px-7  text-gray text-base font-Lexend leading-tight hover:font-bold hover:text-primary-light transition-all ease-in-out  duration-300">
+                                                {child.name}
+                                            </a>
+                                         </li>
+                                    </div>
                                 ))}
                             </ul>
                         )}

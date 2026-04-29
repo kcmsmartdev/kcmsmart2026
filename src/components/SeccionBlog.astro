@@ -34,7 +34,7 @@ const articulos = [
 ]
 ---
 
-<div class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
+<div class="max-w-7xl mx-auto p-4 flex flex-col mt-28">
   <section class="flex flex-col gap-3 items-center">
 
     <h2 class="text-2xl font-Anton text-center text-white mb-4">
@@ -50,7 +50,7 @@ const articulos = [
       {articulos.map((art) => (
         <section class="flex flex-col gap-4 group">
 
-          <!-- Thumbnail -->
+          
           <div class="overflow-hidden rounded-4xl group-hover:rounded-4xl transition-all duration-300 ease-in-out relative">
             <img
               src={art.img.src}
@@ -79,17 +79,14 @@ const articulos = [
             {art.extracto}
           </p>
 
-          <!-- Botón -->
+          
           <a href={art.href}
             class="font-Anton text-gray p-3 flex gap-5 items-center rounded-2xl
             group-hover:rounded-4xl border-2 border-gray-dark
             group-hover:border-transparent group-hover:bg-primary-light group-hover:text-black
             transition-all duration-700 ease-in-out">
             LEER ARTÍCULO...
-            <Icon
-              name="icon-park-outline:arrow-right-up"
-              class="size-7 group-hover:rotate-45 transition-transform duration-500 ease-in-out"
-            />
+            <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
           </a>
 
         </section>
@@ -97,7 +94,7 @@ const articulos = [
 
     </div>
 
-    <!-- Ver todos -->
+ 
     <div class="flex justify-end mt-6">
       <a href="/blog"
         class="font-Anton text-gray-dark text-sm flex items-center gap-2
