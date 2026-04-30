@@ -1,0 +1,69 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+  <Navbar />
+
+  <main class="max-w-5xl mx-auto px-4 mt-40 lg:mt-44 flex flex-col items-center text-center">
+
+    <!-- ERROR CODE -->
+    <h1 class="font-Anton text-7xl lg:text-8xl 
+    bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+    bg-size-[300%_300%]
+    bg-clip-text text-transparent
+    animate-gradiente">
+      404
+    </h1>
+
+    <!-- MENSAJE -->
+    <h2 class="font-Anton text-xl lg:text-2xl text-white mt-6">
+      Página no encontrada
+    </h2>
+
+    <p class="font-Lexend text-gray text-base max-w-xl mt-4 leading-relaxed">
+      La página que estás buscando no existe o fue movida.  
+      Pero no te preocupes, puedes volver al inicio o explorar nuestros servicios.
+    </p>
+
+
+
+
+      <a href="#" class="font-Anton text-gray px-16 py-3 mt-8 flex gap-5 items-center rounded-2xl group-hover:rounded-4xl  border-2 border-gray-dark hover:border-transparent
+        hover:bg-primary-light hover:text-black transform duration-700 ease-in-out  ">
+           Ir a inicio...
+        </a>
+
+     
+
+
+    <!-- BLOQUE EXTRA (branding) -->
+    <div class="mt-16 border border-primary-light/40 rounded-2xl p-6 
+        bg-linear-to-r from-primary-light/10 via-transparent to-primary-light/10 max-w-xl
+        flex flex-col gap-4">
+
+        <h3 class="font-Anton text-lg text-white">
+            ¿Buscabas crear una web profesional?
+        </h3>
+
+        <p class="font-Lexend text-gray text-sm">
+            En KCM SMART desarrollamos sitios web rápidos, modernos y optimizados para ayudarte a crecer en internet.
+        </p>
+
+        <a href="/contacto" 
+            class="inline-flex font-Anton text-gray px-5 py-3 rounded-xl border-2 border-gray-dark
+            transition-all duration-500 ease-in-out hover:rounded-4xl
+            hover:bg-primary-light hover:text-black hover:border-transparent">
+            Contactar
+        </a>
+
+        </div>
+
+  </main>
+
+  <Footer />
+</Layout>
