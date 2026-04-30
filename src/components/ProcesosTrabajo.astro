@@ -52,7 +52,7 @@ const pasos = [
   <div class="relative max-w-2xl mx-auto flex flex-col" id="proceso-steps">
 
     <!-- Línea vertical -->
-    <div class="absolute left-[26px] top-14 bottom-14 w-px bg-white/5">
+    <div class="absolute left-7 top-14 bottom-14 w-px bg-white/5">
       <div id="proceso-line" class="bg-primary w-full transition-all duration-500 ease-in-out" style="height:0%"></div>
     </div>
 
@@ -76,7 +76,7 @@ const pasos = [
             transition-all duration-300 mb-1">
             PASO {paso.num}
           </span>
-          <h3 class="font-Anton text-xl text-white/30 proceso-title transition-all duration-300">
+          <h3 class="font-Anton text-xl text-white proceso-title transition-all duration-300">
             {paso.titulo}
           </h3>
           <p class="font-Lexend text-gray text-sm leading-relaxed proceso-desc
@@ -116,7 +116,7 @@ const pasos = [
         numText.classList.add('!text-white');
         label.classList.remove('text-primary-light/0');
         label.classList.add('text-primary-light');
-        title.classList.replace('text-white/30', 'text-white');
+        title.classList.replace('text-white/70', 'text-white');
         desc.classList.remove('max-h-0', 'opacity-0');
         desc.classList.add('max-h-32', 'opacity-100', 'mt-2');
         tags.classList.remove('opacity-0', 'mt-0');
@@ -127,10 +127,10 @@ const pasos = [
         label.classList.add('text-primary-light/0');
         label.classList.remove('text-primary-light');
         if (i < idx) {
-          title.classList.replace('text-white/30', 'text-white/60');
+          title.classList.replace('text-white/70', 'text-white/60');
         } else {
           title.classList.remove('text-white/60');
-          title.classList.add('text-white/30');
+          title.classList.add('text-white/70');
         }
         desc.classList.add('max-h-0', 'opacity-0');
         desc.classList.remove('max-h-32', 'opacity-100', 'mt-2');
