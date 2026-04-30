@@ -124,7 +124,17 @@ import { date } from 'astro:schema';
 
     </div>
 
-    <div class="mt-8 text-center py-5">
+    <div class="mt-8 text-center flex flex-wrap justify-between items-center  py-5">
+        
+        <ul class="flex flex-wrap gap-4">
+            <li><a href="/terminos-y-condiciones" 
+                class="text-gray text-sm font-Lexend hover:text-primary-light"> T&C</a></li>
+            <li><a href="/privacidad-de-datos" 
+                class="text-gray text-sm font-Lexend hover:text-primary-light"> Privacidad de datos</a></li>
+            <li><a href="/politica-de-cookies" 
+                class="text-gray text-sm font-Lexend hover:text-primary-light"> Cookies</a></li>
+        </ul>
+        
         <p class="text-gray text-sm font-Lexend">© {new Date().getFullYear()} KCMSMART | <a href="/politica-de-privacidad">POLÍTICA DE PRIVACIDAD</a></p>
     </div>
 </footer>

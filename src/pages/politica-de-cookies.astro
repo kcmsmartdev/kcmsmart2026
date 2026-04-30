@@ -1,0 +1,131 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <Navbar />
+
+  <main class="max-w-5xl mx-auto px-4 mt-40 lg:mt-44">
+
+    <!-- HERO -->
+    <section class="flex flex-col gap-6">
+      <h1 class="font-Anton text-3xl lg:text-4xl 
+      bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+      bg-size-[300%_300%]
+      bg-clip-text text-transparent
+      animate-gradiente">
+        Política de Cookies
+      </h1>
+
+      <p class="font-Lexend text-gray text-base leading-relaxed max-w-2xl">
+        En <span class="text-white">KCM SMART</span> utilizamos cookies para mejorar tu experiencia de navegación y optimizar el rendimiento del sitio web.
+      </p>
+
+      <span class="font-Lexend text-sm text-gray-dark">
+        Última actualización: Abril 2026
+      </span>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="flex flex-col gap-6 mt-16">
+
+      <!-- 1 -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          1. ¿Qué son las cookies?
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web.  
+          Permiten recordar información sobre tu navegación para ofrecer una 
+          <span class="text-white">experiencia más rápida, personalizada y eficiente</span>.
+        </p>
+      </article>
+
+      <!-- 2 -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-4">
+          2. Tipos de cookies que utilizamos
+        </h2>
+
+        <ul class="flex flex-col gap-3 font-Lexend text-gray">
+
+          <li>
+            <span class="text-white">Cookies técnicas:</span> necesarias para el funcionamiento básico del sitio.
+          </li>
+
+          <li>
+            <span class="text-white">Cookies de análisis:</span> recopilan información anónima sobre el uso del sitio para mejorar su rendimiento.
+          </li>
+
+          <li>
+            <span class="text-white">Cookies de rendimiento:</span> optimizan la velocidad y funcionalidad del sitio web.
+          </li>
+
+        </ul>
+      </article>
+
+      <!-- 3 -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          3. ¿Cómo puedes gestionar las cookies?
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Puedes aceptar, rechazar o eliminar las cookies desde la configuración de tu navegador.  
+          Ten en cuenta que deshabilitar algunas de ellas puede afectar el 
+          <span class="text-white">correcto funcionamiento del sitio web</span>.
+        </p>
+      </article>
+
+      <!-- 4 -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          4. Actualizaciones
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Esta Política de Cookies puede actualizarse en cualquier momento para reflejar cambios en el sitio o en la normativa aplicable.  
+          Te recomendamos revisarla periódicamente.
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="mt-20 ">
+
+      <div class="flex flex-col border border-primary-light/40 rounded-2xl p-6 
+      bg-linear-to-r from-primary-light/10 via-transparent to-primary-light/10">
+
+        <h3 class="font-Anton text-xl text-white mb-2">
+          ¿Tienes alguna duda?
+        </h3>
+
+        <p class="font-Lexend text-gray text-base ">
+          Si necesitas más información sobre estos términos, puedes contactarnos y resolveremos cualquier consulta. 
+          <a href="mailto:contacto@kcmsmart.com"
+          class="hover:text-primary-light">contacto@kcmsmart.com</a>
+        </p>
+
+        
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

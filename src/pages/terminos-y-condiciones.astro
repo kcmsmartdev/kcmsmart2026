@@ -1,0 +1,137 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <Navbar />
+
+  <main class="max-w-5xl mx-auto px-4 mt-40 lg:mt-44">
+
+    <!-- HERO -->
+    <section class="flex flex-col gap-6">
+      <h1 class="font-Anton text-3xl lg:text-4xl 
+      bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+      bg-size-[300%_300%]
+      bg-clip-text text-transparent
+      animate-gradiente">
+        Términos y Condiciones
+      </h1>
+
+      <p class="font-Lexend text-gray text-base leading-relaxed max-w-2xl">
+        El acceso y uso del sitio web de <span class="text-white">KCM SMART</span> implica la aceptación de los siguientes términos y condiciones.
+      </p>
+
+      <!-- META INFO -->
+      <span class="font-Lexend text-sm text-gray-dark">
+        Última actualización: Abril 2026
+      </span>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="flex flex-col gap-6 mt-16">
+
+      <!-- CARD -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          1. Uso del Sitio Web
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Este sitio tiene fines informativos y comerciales relacionados con los servicios de desarrollo web ofrecidos por 
+          <span class="text-white">KCM SMART</span>. El usuario se compromete a utilizar el sitio de manera 
+          <span class="text-white">lícita, respetuosa</span> y sin afectar su funcionamiento.
+        </p>
+      </article>
+
+      <!-- CARD -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          2. Propiedad Intelectual
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Todos los contenidos del sitio, incluyendo textos, diseños, imágenes, logotipos y código, son propiedad de 
+          <span class="text-white">KCM SMART</span>, salvo que se indique lo contrario.  
+          Queda prohibida su 
+          <span class="text-white">reproducción, distribución o uso</span> sin autorización previa.
+        </p>
+      </article>
+
+      <!-- CARD -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          3. Responsabilidad
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          <span class="text-white">KCM SMART</span> no se responsabiliza por daños derivados del uso indebido del sitio web ni por 
+          interrupciones, errores o fallos técnicos que estén fuera de su control.
+        </p>
+      </article>
+
+      <!-- CARD -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          4. Enlaces Externos
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Este sitio puede contener enlaces a páginas de terceros. 
+          <span class="text-white">KCM SMART</span> no tiene control sobre su contenido, políticas o prácticas, 
+          por lo que no asume responsabilidad sobre los mismos.
+        </p>
+      </article>
+
+      <!-- CARD -->
+      <article class="group border border-gray-dark/40 rounded-2xl p-6 
+      transition-all duration-300 hover:border-primary-light/60 hover:bg-white/2">
+
+        <h2 class="font-Anton text-lg text-white mb-2">
+          5. Modificaciones
+        </h2>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          <span class="text-white">KCM SMART</span> se reserva el derecho de modificar estos términos en cualquier momento.  
+          Las actualizaciones entrarán en vigor una vez publicadas en el sitio web.
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="mt-20 ">
+
+      <div class="flex flex-col border border-primary-light/40 rounded-2xl p-6 
+      bg-linear-to-r from-primary-light/10 via-transparent to-primary-light/10">
+
+        <h3 class="font-Anton text-xl text-white mb-2">
+          ¿Tienes alguna duda?
+        </h3>
+
+        <p class="font-Lexend text-gray text-base ">
+          Si necesitas más información sobre estos términos, puedes contactarnos y resolveremos cualquier consulta. 
+          <a href="mailto:contacto@kcmsmart.com"
+          class="hover:text-primary-light">contacto@kcmsmart.com</a>
+        </p>
+
+        
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

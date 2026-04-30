@@ -10,134 +10,134 @@ import "../styles/global.css";
     <Navbar />
 
 
-<div class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
+      <main class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
 
 
-  <section class="flex flex-col items-center gap-3">
-    <h1 class="font-Anton text-3xl leading-12 
-    bg-linear-to-r from-primary-light via-primary-dark to-primary-light
-    bg-size-[300%_300%]
-    bg-clip-text text-transparent
-    animate-gradiente">
-      CONTÁCTANOS
-    </h1>
+        <section class="flex flex-col items-center gap-3">
+          <h1 class="font-Anton text-3xl leading-12 
+          bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+          bg-size-[300%_300%]
+          bg-clip-text text-transparent
+          animate-gradiente">
+            CONTÁCTANOS
+          </h1>
 
-    <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed">
-      ¿Tienes un proyecto en mente? Escríbenos y te ayudaremos a hacerlo realidad con soluciones digitales modernas, rápidas y efectivas.
-    </p>
-  </section>
-
-  <!-- CONTENIDO -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+          <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed">
+            ¿Tienes un proyecto en mente? Escríbenos y te ayudaremos a hacerlo realidad con soluciones digitales modernas, rápidas y efectivas.
+          </p>
+        </section>
 
 
-    <section class="flex flex-col gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
 
 
-      <a href="https://api.whatsapp.com/send/?phone=51986940516&text=Hola%2C+quiero+informaci%C3%B3n+sobre+una+p%C3%A1gina+web"
-      target="_blank"
-      class="group border border-gray-dark rounded-4xl p-6 flex items-center gap-5
-      hover:bg-primary-light hover:text-black transition-all duration-300">
+          <section class="flex flex-col gap-6">
 
-        <Icon name="mdi:whatsapp" class="size-8 text-primary-light group-hover:text-black" />
 
-        <div>
-          <p class="font-Anton text-lg text-white group-hover:text-black">WhatsApp</p>
-          <span class="font-Lexend text-gray group-hover:text-black">
-            +51 986 940 516
-          </span>
+            <a href="https://api.whatsapp.com/send/?phone=51986940516&text=Hola%2C+quiero+informaci%C3%B3n+sobre+una+p%C3%A1gina+web"
+            target="_blank"
+            class="group border border-gray-dark rounded-4xl p-6 flex items-center gap-5
+            hover:bg-primary-light hover:text-black transition-all duration-300">
+
+              <Icon name="mdi:whatsapp" class="size-8 text-primary-light group-hover:text-black" />
+
+              <div>
+                <p class="font-Anton text-lg text-white group-hover:text-black">WhatsApp</p>
+                <span class="font-Lexend text-gray group-hover:text-black">
+                  +51 986 940 516
+                </span>
+              </div>
+            </a>
+
+
+            <a href="mailto:contacto@kcmsmart.com"
+            class="group border border-gray-dark rounded-4xl p-6 flex items-center gap-5
+            hover:bg-primary-light hover:text-black transition-all duration-300">
+
+              <Icon name="mdi:email-outline" class="size-8 text-primary-light group-hover:text-black" />
+
+              <div>
+                <p class="font-Anton text-lg text-white group-hover:text-black">Correo</p>
+                <span class="font-Lexend text-gray group-hover:text-black">
+                  contacto@kcmsmart.com
+                </span>
+              </div>
+            </a>
+
+            <span 
+            class="group border border-gray-dark rounded-4xl p-6 flex items-center gap-5
+            hover:bg-primary-light hover:text-black transition-all duration-300">
+
+              <Icon name="mdi:map-marker" class="size-8 text-primary-light group-hover:text-black" />
+
+              <div>
+                <p class="font-Anton text-lg text-white group-hover:text-black">Ubicación</p>
+                <span class="font-Lexend text-gray group-hover:text-black">
+                  Lima, Perú
+                </span>
+              </div>
+            </span>
+
+
+            <a href="https://api.whatsapp.com/send/?phone=51986940516&text=Hola%2C+quiero+informaci%C3%B3n+sobre+una+p%C3%A1gina+web"
+            target="_blank"
+            class="font-Anton text-black bg-primary-light p-4 text-center rounded-2xl 
+            flex gap-4 items-center justify-center group
+            hover:rounded-4xl transition-all duration-300">
+              SOLICITAR COTIZACIÓN
+              <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+            </a>
+
+          </section>
+
+          <!-- 📝 FORMULARIO -->
+          <section class="flex flex-col gap-6 border border-white/5 p-6 rounded-4xl bg-body/50 backdrop-blur-md">
+
+            <h2 class="font-Anton text-2xl text-gray">
+              Envíanos un mensaje
+            </h2>
+
+            <form class="flex flex-col gap-4">
+              <label for="name" class="text-gray text-base font-Lexend">Nombre</label>
+              <input type="text" id="name" placeholder="Miguel Torres"
+              class="bg-transparent border border-gray-dark rounded-xl p-3 text-white outline-none focus:border-primary-light" />
+
+              <label for="email" class="text-gray font-Lexend">E-mail</label>
+              <input type="email" id="email" placeholder="miguel@gmail.com"
+              class="bg-transparent border border-gray-dark rounded-xl p-3 text-white outline-none focus:border-primary-light" />
+              
+              
+              <div class="flex flex-col gap-1.5">
+                <label for="servicio" class="font-Lexend text-base text-gray">Servicio</label>
+                <select name="servicio" id="servicio"
+                  class=" border border-gray-dark rounded-xl px-4 py-3
+                  font-Lexend text-sm text-gray
+                  focus:outline-none focus:border-primary transition-colors duration-200">
+                  <option value="">Selecciona un servicio...</option>
+                  <option>Diseño y desarrollo web</option>
+                  <option>Desarrollo de sistemas web</option>
+                  <option>Mantenimiento web</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <label for="message" class="text-gray font-Lexend">Mensaje</label>
+              <textarea rows="5" id="message" placeholder="Cuéntanos sobre tu proyecto..."
+              class="bg-transparent border border-gray-dark rounded-xl p-3 text-white outline-none focus:border-primary-light resize-none"></textarea>
+
+              <button type="submit"
+              class="font-Anton bg-primary-light text-black p-3 rounded-2xl  group
+              flex gap-4 justify-center items-center
+              hover:rounded-4xl transition-all duration-500">
+                ENVIAR MENSAJE
+                <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+              </button>
+
+            </form>
+
+          </section>
+
         </div>
-      </a>
 
-
-      <a href="mailto:contacto@kcmsmart.com"
-      class="group border border-gray-dark rounded-4xl p-6 flex items-center gap-5
-      hover:bg-primary-light hover:text-black transition-all duration-300">
-
-        <Icon name="mdi:email-outline" class="size-8 text-primary-light group-hover:text-black" />
-
-        <div>
-          <p class="font-Anton text-lg text-white group-hover:text-black">Correo</p>
-          <span class="font-Lexend text-gray group-hover:text-black">
-            contacto@kcmsmart.com
-          </span>
-        </div>
-      </a>
-
-      <span 
-      class="group border border-gray-dark rounded-4xl p-6 flex items-center gap-5
-      hover:bg-primary-light hover:text-black transition-all duration-300">
-
-        <Icon name="mdi:map-marker" class="size-8 text-primary-light group-hover:text-black" />
-
-        <div>
-          <p class="font-Anton text-lg text-white group-hover:text-black">Ubicación</p>
-          <span class="font-Lexend text-gray group-hover:text-black">
-            Lima, Perú
-          </span>
-        </div>
-      </span>
-
-
-      <a href="https://api.whatsapp.com/send/?phone=51986940516&text=Hola%2C+quiero+informaci%C3%B3n+sobre+una+p%C3%A1gina+web"
-      target="_blank"
-      class="font-Anton text-black bg-primary-light p-4 text-center rounded-2xl 
-      flex gap-4 items-center justify-center group
-      hover:rounded-4xl transition-all duration-300">
-        SOLICITAR COTIZACIÓN
-        <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
-      </a>
-
-    </section>
-
-    <!-- 📝 FORMULARIO -->
-    <section class="flex flex-col gap-6 border border-white/5 p-6 rounded-4xl bg-body/50 backdrop-blur-md">
-
-      <h2 class="font-Anton text-2xl text-gray">
-        Envíanos un mensaje
-      </h2>
-
-      <form class="flex flex-col gap-4">
-        <label for="name" class="text-gray text-base font-Lexend">Nombre</label>
-        <input type="text" id="name" placeholder="Miguel Torres"
-        class="bg-transparent border border-gray-dark rounded-xl p-3 text-white outline-none focus:border-primary-light" />
-
-        <label for="email" class="text-gray font-Lexend">E-mail</label>
-        <input type="email" id="email" placeholder="miguel@gmail.com"
-        class="bg-transparent border border-gray-dark rounded-xl p-3 text-white outline-none focus:border-primary-light" />
-        
-        
-        <div class="flex flex-col gap-1.5">
-          <label class="font-Lexend text-base text-gray">Servicio</label>
-          <select name="servicio"
-            class=" border border-gray-dark rounded-xl px-4 py-3
-            font-Lexend text-sm text-gray
-            focus:outline-none focus:border-primary transition-colors duration-200">
-            <option value="">Selecciona un servicio...</option>
-            <option>Diseño y desarrollo web</option>
-            <option>Desarrollo de sistemas web</option>
-            <option>Mantenimiento web</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <label for="message" class="text-gray font-Lexend">Mensaje</label>
-        <textarea rows="5" id="message" placeholder="Cuéntanos sobre tu proyecto..."
-        class="bg-transparent border border-gray-dark rounded-xl p-3 text-white outline-none focus:border-primary-light resize-none"></textarea>
-
-        <button type="submit"
-        class="font-Anton bg-primary-light text-black p-3 rounded-2xl  group
-        flex gap-4 justify-center items-center
-        hover:rounded-4xl transition-all duration-500">
-          ENVIAR MENSAJE
-          <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
-        </button>
-
-      </form>
-
-    </section>
-
-  </div>
-
-</div>
+      </main>
     <Footer />
 </Layout>
