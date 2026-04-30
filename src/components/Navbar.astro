@@ -52,7 +52,7 @@ const MenuList: menuList[] = [
 
 
     <a href="/">
-      <img src="/logo-kcmsmart.svg" alt="Logo kcmsmart.com" class="w-24 lg:w-32" />
+      <img src="/logo-kcmsmart.svg" alt="Logo kcmsmart.com" class="w-24 lg:w-32" width="96px" height="128px" />
     </a>
 
 
@@ -87,7 +87,7 @@ const MenuList: menuList[] = [
 
                 {e.children!.map((child) => (
                   <li class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition">
-                    <img src={child.img.src} alt={child.name}
+                    <img src={child.img.src} alt="imagen servicio"
                       class="w-16 h-16 object-cover rounded-md">
 
                     <div>
@@ -105,7 +105,9 @@ const MenuList: menuList[] = [
     </ul>
 
     <!-- Mobile Button -->
-    <button id="menu-toggle" class="lg:hidden p-2">
+    <button id="menu-toggle"
+    aria-label="menu" 
+    class="lg:hidden p-2" >
       <Icon name="solar:hamburger-menu-bold" class="text-gray size-8" />
     </button>
   </nav>
