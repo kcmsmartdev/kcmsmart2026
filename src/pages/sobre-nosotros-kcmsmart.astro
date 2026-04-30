@@ -1,14 +1,38 @@
 ---
+import { Icon } from "astro-icon/components";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+
 import "../styles/global.css";
+import CardContacto from "../components/CardContacto.astro";
+
+const beneficios =[
+
+    {titulo:"Confianza desde el primer vistazo", 
+    desc:"Tu marca proyectará profesionalismo absoluto, generando credibilidad inmediata con tus visitantes.",
+    icon:"mdi:coffee-to-go"},
+
+    {titulo:"Recupera oportunidades", 
+    desc:"Convierte a los visitantes que antes se iban por frustración en clientes reales y recurrentes.",
+    icon:"mdi:arrow-bottom-left-bold-box"},
+
+    {titulo:"Acompañamiento real", 
+    desc:"No solo entregamos el proyecto; te guiamos en la evolución digital de tu negocio en Lima.",
+    icon:"mdi:account-group"},
+
+    {titulo:"Crecimiento estratégico", 
+    desc:"Tu web se convierte en una herramienta de ventas activa 24/7",
+    icon:"mdi:slope-uphill"},
+
+
+]
 
 ---
 <Layout >
     <Navbar />
     <main class="max-w-7xl mx-auto flex flex-col p-4 gap-32 mt-32">
-        <section class="flex flex-col items-center gap-3">
+       <section class="flex flex-col items-start gap-3">
             <h1 class="font-Anton text-3xl leading-12 
             bg-linear-to-r from-primary-light via-primary-dark to-primary-light
             bg-size-[300%_300%]
@@ -18,9 +42,91 @@ import "../styles/global.css";
             </h1>
 
             <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed">
-            ¿Tienes un proyecto en mente? Escríbenos y te ayudaremos a hacerlo realidad con soluciones digitales modernas, rápidas y efectivas.
+             En KCM SMART creamos sitios web rápidos, estratégicos y optimizados para SEO que posicionan tu marca por encima de la 
+             competencia. No solo construimos páginas; diseñamos motores de crecimiento digital.
             </p>
         </section>
+
+        <div class="flex flex-col gap-4">
+            <section>
+                <h2 class="font-Lexend text-white text-2xl">Beneficios de trabajar con nosotros</h2>
+            </section>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+            {
+                beneficios.map((e)=>{
+
+                    return(
+
+                    <section class="group min-h-52  flex flex-col gap-3 bg-gray p-5 rounded-2xl border-4 border-b-primary lg:border-transparent hover:border-b-primary shadow-xl lg:hover:shadow-gray-dark/35">
+                        <div class="w-fit group-hover:p-2 group-hover:bg-black group-hover:rounded-4xl group-hover:scale-105 transition-all duration-300 eas">
+                            <Icon name={e.icon}
+                                class="size-7 transition-transform duration-500  
+                                 text-black  group-hover:text-white " />
+                        
+                        </div>
+                        <h3 class="font-Anton text-base">
+                            {e.titulo}
+                        </h3>
+                        <p class="font-Lexend text-sm text-black/80">
+                            {e.desc}
+                        </p>
+                    </section>
+
+                    )
+                })
+            }
+        </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div>
+
+            </div>
+
+            <section class="flex flex-col gap-4">
+                <span class="font-Anton  text-base font-light text-white">Sobre KCM SMART</span>
+
+                <h2 class="font-Lexend text-3xl font-bold text-white leading-tight">
+                    La historia detrás del código
+                </h2>
+
+                <p class="text-gray font-Lexend text-base">
+                    Mi nombre es <strong class="text-white">Kener Cotrina</strong>, fundador de KCM SMART. Mi viaje en el desarrollo web comenzó desde muy joven con una misión clara: democratizar la tecnología de alto rendimiento para empresas peruanas.
+                </p>
+
+                <p class="text-gray font-Lexend text-base">
+                    A lo largo de mi carrera como desarrollador, vi cómo negocios increíbles fallaban digitalmente debido a herramientas deficientes. En KCM SMART, fusionamos la ingeniería de software con la estrategia de marketing para crear algo superior.
+                </p>
+
+                <p class="text-gray font-Lexend text-base">
+                    Creemos en la precisión, en la velocidad y, sobre todo, en los resultados tangibles. Cada proyecto que aceptamos es una oportunidad para demostrar que el desarrollo web local puede competir a nivel global.
+                </p>
+
+                <div class="flex flex-col mt-8">
+                    <p class="font-Lexend text-2xl text-white leading-tight tracking-widest">Kener Cotrina</p>
+                    <p class="font-Lexend text-primary-light text-sm">FOUNDER & LEAD DEVELOPER</p>
+                </div>
+            </section>
+
+        </div>
+
+        <div class=" bg-primary-light flex flex-col items-center justify-center rounded-2xl min-h-72 py-7 lg:min-h-96 gap-7 mt-32">
+
+            <p class="max-w-2xl text-black font-Anton text-center text-3xl lg:text-4xl">
+                Estamos listo para ayudarte a crear una web profesional que impulse tu negocio.
+            </p>
+
+            <a href="/contactanos"
+            class="group font-Anton text-base  lg:text-xl text-black flex gap-5 py-4 px-16  border-2 border-black rounded-2xl hover:border-transparent 
+            hover:bg-black hover:text-primary-light  hover:rounded-4xl
+            transform duration-500 ease-in-out">
+
+                CONTÁCTANOS
+
+                <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+            </a>
+
+        </div>
     </main>
     <Footer />
 </Layout>

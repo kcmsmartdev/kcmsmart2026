@@ -4,9 +4,145 @@ import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
+import proyecto1 from "../assets/proyectos/img-proyecto-1.png"
+import { Icon } from "astro-icon/components";
+
+const proyectos =[
+    {titulo:"Cuotitas", 
+    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    btn:"/", 
+    img:proyecto1,
+    tec:" Astro Tailwind TypeScript"},
+    {titulo:"Cuotitas", 
+    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    btn:"/", 
+    img:proyecto1,
+    tec:" Astro Tailwind TypeScript"},
+
+    {titulo:"Cuotitas", 
+    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    btn:"/", 
+    img:proyecto1,
+    tec:" Astro Tailwind TypeScript"},
+
+    {titulo:"Cuotitas", 
+    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    btn:"/", 
+    img:proyecto1,
+    tec:" Astro Tailwind TypeScript"},
+
+
+    {titulo:"Cuotitas", 
+    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    btn:"/", 
+    img:proyecto1,
+    tec:" Astro Tailwind TypeScript"},
+
+
+    {titulo:"Cuotitas", 
+    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    btn:"/", 
+    img:proyecto1,
+    tec:" Astro Tailwind TypeScript"},
+]
+
 ---
 <Layout >
     <Navbar />
+     <main class="max-w-7xl mx-auto flex flex-col p-4  mt-32">
+        <section class="flex flex-col items-start gap-3">
+            <h1 class="font-Anton text-3xl leading-12 
+            bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+            bg-size-[300%_300%]
+            bg-clip-text text-transparent
+            animate-gradiente">
+                nuestros proyectos
+            </h1>
 
+            <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed">
+             Algunos de nuestros proyectos más relevantes. <span class="font-light italic">Una web bien hecha, moderna, rápida y optimizada para mostrar lo que ofreces.</span>
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            {
+                proyectos.map((e) => {
+                return (
+
+                    <article class="mt-12 group relative overflow-hidden rounded-2xl transition-all duration-500">
+
+                    <!-- Imagen -->
+                    <div class="overflow-hidden rounded-2xl">
+                        <img 
+                        src={e.img.src} 
+                        alt={e.titulo}
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                        >
+                    </div>
+
+                    <!-- Contenido -->
+                    <section class="flex flex-col gap-4 p-4">
+
+                        <h3 class="font-Anton text-base text-white">
+                        {e.titulo}
+                        </h3>
+
+                        <p class="font-Lexend text-gray text-base leading-relaxed">
+                        {e.des}
+                        </p>
+
+                        <span class="font-Anton text-sm text-gray-dark">
+                        {e.tec}
+                        </span>
+
+                        <!-- Botón -->
+                        <a 
+                        href="#" 
+                        class="font-Anton text-gray p-3 flex gap-3 items-center justify-between rounded-2xl border-2 border-gray-dark 
+                        transition-all duration-500 ease-in-out
+                        group-hover:bg-primary-light 
+                        group-hover:text-black 
+                        group-hover:border-transparent"
+                        >
+                        Saber más...
+
+                        <Icon 
+                            name="icon-park-outline:arrow-right-up" 
+                            class="size-6 transition-transform duration-500 ease-in-out group-hover:rotate-45"
+                        />
+                        </a>
+
+                    </section>
+
+                    </article>
+
+                )
+                })
+            }
+            
+
+            </div>
+
+    <div class=" bg-primary-light flex flex-col items-center justify-center rounded-2xl min-h-72 py-7 lg:min-h-96 gap-7 mt-32">
+
+        <p class="max-w-2xl text-black font-Anton text-center text-3xl lg:text-4xl">
+            Estamos listo para ayudarte a crear una web profesional que impulse tu negocio.
+        </p>
+
+        <a href="/contactanos"
+        class="group font-Anton text-base  lg:text-xl text-black flex gap-5 py-4 px-16  border-2 border-black rounded-2xl hover:border-transparent 
+        hover:bg-black hover:text-primary-light  hover:rounded-4xl
+        transform duration-500 ease-in-out">
+
+            CONTÁCTANOS
+
+            <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
+        </a>
+
+        
+    </div>
+     </main>
     <Footer />
 </Layout>
