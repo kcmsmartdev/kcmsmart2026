@@ -1,12 +1,115 @@
 ---
+import { getCollection } from "astro:content";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+
 import "../styles/global.css";
+
+const posts =[
+    {   title: "¿Cuánto cuesta una página web en Perú en 2026?",
+        description: "Una de las preguntas más comunes antes de crear un sitio web es cuánto cuesta realmente...",
+        date: "2026-05-12",
+        image:"https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Sistema web a medida para empresas",
+        href:"/blog/cuanto-cuesta-una-pagina-web-en-peru-en-2026"
+    },
+
+    {   title: "¿Cuándo necesita tu empresa un sistema a medida?",
+        description: "Muchas empresas comienzan gestionando sus procesos con herramientas básicas como Excel...",
+        date: "3 may 2025",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        href:"/blog/cuando-necesita-tu-empresa-un-sistema-a-medida"
+    },
+
+    {   title: "¿Por qué mi página web no aparece en Google?",
+        description: "Tener una página web no garantiza que aparezca en Google. Muchas empresas publican su sitio...",
+        date: "24 abr 2025",
+        image:"https://images.unsplash.com/photo-1556155092-490a1ba16284",
+        href:"/blog/por-que-mi-pagina-web-no-aparece-en-google"
+    },
+
+]
 
 ---
 <Layout >
     <Navbar />
+        <main class="max-w-7xl mx-auto flex flex-col px-4 gap-32 mt-32 mb-24">
 
+
+    <section class="flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
+
+      <h1 class="font-Anton text-3xl lg:text-5xl leading-tight
+      bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+      bg-size-[300%_300%]
+      bg-clip-text text-transparent animate-gradiente">
+        Blog de desarrollo web
+      </h1>
+
+      <p class="font-Lexend text-gray leading-relaxed">
+        Aprende sobre diseño web, SEO y desarrollo de sistemas con contenido práctico,
+        claro y enfocado en negocios reales.
+      </p>
+
+    </section>
+
+  
+
+
+    <section class="flex flex-col gap-10">
+
+      <h2 class="font-Anton text-2xl text-white">
+        Últimos artículos
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {
+          posts.map((post) => (
+
+            <a href={post.href} 
+              class="group relative border border-gray-dark/40 rounded-2xl overflow-hidden
+              hover:border-primary-light/60 transition-all duration-300">
+
+              <!-- hover glow -->
+              <div class="absolute inset-0 bg-primary-light/5 opacity-0 group-hover:opacity-100 transition"></div>
+
+              <!-- IMAGE -->
+              <div class="overflow-hidden">
+                <img src={post.image}
+                  alt={post.title}
+                  class="w-full h-52 object-cover
+                  transition-transform duration-500 group-hover:scale-105">
+              </div>
+
+              <!-- CONTENT -->
+              <div class="p-5 flex flex-col gap-3 relative z-10">
+
+                
+
+                <h3 class="font-Anton text-white text-lg leading-snug">
+                  {post.title}
+                </h3>
+
+                <p class="font-Lexend text-gray text-sm line-clamp-3">
+                  {post.description}
+                </p>
+
+                <span class="text-xs text-gray-dark">
+                  {post.date}
+                </span>
+
+              </div>
+
+            </a>
+
+          ))
+        }
+
+      </div>
+
+    </section>
+
+  </main>
     <Footer />
 </Layout>

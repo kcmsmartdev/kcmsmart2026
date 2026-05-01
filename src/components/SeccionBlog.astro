@@ -2,34 +2,30 @@
 // Blog.astro
 import { Icon } from 'astro-icon/components'
 
-import imgBlog1 from '../assets/blog/img-proyecto-1.webp'
-import imgBlog2 from '../assets/blog/img-proyecto-1.webp'
-import imgBlog3 from '../assets/blog/img-proyecto-1.webp'
-
 const articulos = [
   {
-    tag: "SEO",
+  
     fecha: "12 may 2025",
-    titulo: "Cómo posicionar tu negocio en Google sin pagar publicidad",
-    extracto: "Las estrategias de SEO que realmente funcionan para negocios locales en Perú y Latinoamérica.",
-    href: "/blog/seo-sin-publicidad",
-    img: imgBlog1,
+    titulo: "¿Cuánto cuesta una página web en Perú en 2026?",
+    extracto: " Una de las preguntas más comunes antes de crear un sitio web es cuánto cuesta realmente...",
+    href: "/blog/cuanto-cuesta-una-pagina-web-en-peru-en-2026",
+    img: "https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    tag: "Desarrollo web",
+
     fecha: "3 may 2025",
-    titulo: "¿Por qué tu sitio web carga lento y cómo solucionarlo?",
-    extracto: "Velocidad de carga, Core Web Vitals y los errores más comunes que afectan la experiencia del usuario.",
-    href: "/blog/sitio-web-lento",
-    img:imgBlog2,
+    titulo: "¿Cuándo necesita tu empresa un sistema a medida?",
+    extracto: "Muchas empresas comienzan gestionando sus procesos con herramientas básicas como Excel...",
+    href: "/blog/cuando-necesita-tu-empresa-un-sistema-a-medida",
+    img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    tag: "Diseño",
+
     fecha: "24 abr 2025",
-    titulo: "Diseño web que convierte: lo que tu competencia no te cuenta",
-    extracto: "Principios de UX que hacen que los visitantes se conviertan en clientes reales.",
-    href: "/blog/diseno-que-convierte",
-    img:imgBlog3,
+    titulo: "¿Por qué mi página web no aparece en Google?",
+    extracto: "Tener una página web no garantiza que aparezca en Google. Muchas empresas publican su sitio...",
+    href: "/blog/por-que-mi-pagina-web-no-aparece-en-google",
+    img:"https://images.unsplash.com/photo-1556155092-490a1ba16284",
   },
 ]
 ---
@@ -53,13 +49,11 @@ const articulos = [
           
           <div class="overflow-hidden rounded-4xl group-hover:rounded-4xl transition-all duration-300 ease-in-out relative">
             <img
-              src={art.img.src}
+              src={art.img}
               alt="titulo blog"
               class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <span class="absolute top-3 left-3 font-Anton text-xs px-3 py-1 rounded-full bg-primary text-primary-light">
-              {art.tag}
-            </span>
+            
           </div>
 
           <!-- Meta -->

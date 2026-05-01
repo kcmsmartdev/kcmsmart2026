@@ -1,33 +1,210 @@
 ---
 
+import { Icon } from "astro-icon/components";
 import Footer from "../../components/Footer.astro";
 import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
+import imgHero from "../../assets/img-hero-servicio.webp"
 import "../../styles/global.css";
 
 ---
 <Layout >
     <Navbar />
-    <main class="max-w-7xl mx-auto flex flex-col p-4 gap-32 mt-32">
-        <section class="flex flex-col items-start gap-3">
-            <h1 class="font-Anton text-3xl leading-12 
+    <main class="max-w-7xl mx-auto flex flex-col px-4 gap-44 mt-32">
+
+     
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+       
+            <div class="flex flex-col gap-6">
+            <h1 class="font-Anton text-4xl lg:text-5xl leading-tight
             bg-linear-to-r from-primary-light via-primary-dark to-primary-light
             bg-size-[300%_300%]
             bg-clip-text text-transparent
             animate-gradiente">
-            Diseño y desarrollo web
+                Diseño y desarrollo web
             </h1>
 
-            <p class="max-w-xl font-Lexend text-gray text-base leading-relaxed">
-            Creamos sitios web rápidos, modernos y optimizados para SEO, diseñados para atraer clientes, generar confianza y convertir visitas en resultados reales.
+            <p class="font-Lexend text-gray text-base leading-relaxed max-w-xl">
+                Creamos sitios web rápidos, funcionales y optimizados para SEO, diseñados para proyectar profesionalismo, ofrecer una experiencia fluida y fortalecer tu presencia digital.
             </p>
+
+            <!-- CTA MINI -->
+            <div class="flex gap-4 mt-2">
+                <a href="/contactanos"
+                class="font-Anton text-black bg-primary-light px-6 py-3 rounded-2xl
+                hover:rounded-4xl transition-all duration-500">
+                Empezar proyecto
+                </a>
+
+                <a href="#funciones"
+                class="font-Anton text-gray px-6 py-3 border border-gray-dark rounded-2xl
+                hover:border-primary-light hover:text-white transition">
+                Ver qué incluye...
+                </a>
+            </div>
+            </div>
+
+            <!-- VISUAL -->
+            <div class="relative group">
+
+            <!-- glow -->
+            <div class="absolute -inset-2 bg-primary-light/20 blur-2xl opacity-40 group-hover:opacity-60 transition"></div>
+
+            <img src={imgHero.src} 
+                alt="Diseño web moderno"
+                class="relative rounded-4xl w-full object-cover
+                transition-transform duration-700 group-hover:scale-[1.03]">
+
+            <!-- overlay -->
+            <div class="absolute inset-0 rounded-4xl bg-linear-to-t from-black/40 via-transparent to-transparent"></div>
+            </div>
+
         </section>
 
-        <div>
-            <h2>
-                
+        <!-- DIFERENCIAL (MEJORADO) -->
+        <section class="flex flex-col items-center gap-10">
+
+            <h2 class="font-Anton text-2xl text-white">
+             Creamos soluciones reales.
             </h2>
-        </div>
-    </main>
+
+            
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+
+            {
+                [
+                "Desarrollo a medida",
+                "Enfoque en experiencia de usuario",
+                "Optimización desde el inicio",
+                "No usamos plantillas"
+                
+                ].map((item) => (
+
+                <div class="border border-gray-dark/40 rounded-2xl p-5
+                hover:border-primary-light/60 hover:bg-white/2 transition">
+
+                    <p class="font-Lexend text-gray group-hover:text-white">
+                    {item}
+                    </p>
+
+                </div>
+
+                ))
+            }
+
+            </div>
+       
+
+        </section>
+
+        <!-- FUNCIONES -->
+        <section id="funciones" class="flex flex-col gap-14">
+
+            <div class="flex flex-col items-center text-center gap-4 max-w-2xl mx-auto">
+            <h2 class="font-Anton text-2xl text-white">
+                Todo lo que incluye tu web
+            </h2>
+
+            <p class="font-Lexend text-gray">
+                Cada elemento está diseñado para garantizar rendimiento, buena estructura y una experiencia de usuario sólida.
+            </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            {
+                [
+                "SEO técnico optimizado",
+                "Investigación de palabras clave",
+                "Copywriting estratégico e imágenes optimizadas",
+                "Prototipo personalizado",
+                "Diseño moderno y responsive",
+                "Integración de Google Analytics",
+                "Formulario de contacto optimizado",
+                "Libro de reclamaciones digital",
+                "Correo profesional con tu dominio",
+                "Integración de redes sociales",
+                "Optimización avanzada de carga",
+                "Política de privacidad y popup legal",
+                ].map((item, i) => (
+
+                <article class="group relative border border-gray-dark/40 rounded-2xl p-5 
+                flex items-center justify-between gap-4
+                overflow-hidden
+                transition-all duration-300 hover:border-primary-light/60">
+
+                    <!-- glow hover -->
+                    <div class="absolute inset-0 bg-primary-light/5 opacity-0 group-hover:opacity-100 transition"></div>
+
+                    <div class="flex items-center gap-4 relative z-10">
+
+                    <span class="font-Anton text-lg text-primary-light">
+                        {(i + 1).toString().padStart(2, "0")}
+                    </span>
+
+                    <p class="font-Lexend text-gray group-hover:text-white transition">
+                        {item}
+                    </p>
+
+                    </div>
+
+                    <span class="font-Anton text-gray group-hover:text-primary-light transition group-hover:translate-x-1 relative z-10">
+                    →
+                    </span>
+
+                </article>
+
+                ))
+            }
+
+            <!-- EXTRA -->
+            <article class="border border-primary-light/40 rounded-2xl p-5 
+            flex items-center justify-between gap-4
+            bg-linear-to-r from-primary-light/10 via-transparent to-primary-light/10">
+
+                <div class="flex items-center gap-4">
+                <span class="font-Anton text-lg text-primary-light">+</span>
+                <p class="font-Lexend text-white">Y mucho más según tu proyecto</p>
+                </div>
+
+                <span class="font-Anton text-primary-light">→</span>
+
+            </article>
+
+            </div>
+
+        </section>
+
+        <!-- CTA MODERNO -->
+        <section class="relative overflow-hidden rounded-2xl py-14 text-center">
+
+            <!-- fondo -->
+            <div class="absolute inset-0 bg-primary-light"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2),transparent)]"></div>
+
+            <div class="relative flex flex-col items-center gap-8 px-4">
+
+            <p class="max-w-2xl text-black font-Anton text-2xl lg:text-4xl leading-tight">
+                Estamos listo para ayudarte a crear una web profesional que impulse tu negocio.
+            </p>
+
+            <a href="/contactanos"
+                class="group font-Anton text-black flex gap-4 py-4 px-12 
+                border-2 border-black rounded-2xl 
+                hover:bg-black hover:text-primary-light hover:border-transparent hover:rounded-4xl
+                transition-all duration-500">
+
+                CONTÁCTANOS
+
+                <Icon name="icon-park-outline:arrow-right-up" 
+                class="size-6 rotate-45 group-hover:rotate-45 transition-transform duration-500" />
+            </a>
+
+            </div>
+
+        </section>
+
+        </main>
     <Footer />
 </Layout>

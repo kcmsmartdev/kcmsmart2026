@@ -1,13 +1,206 @@
 ---
 
+import { Icon } from "astro-icon/components";
 import Footer from "../../components/Footer.astro";
 import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
+import imgHero from "../../assets/img-hero-dashboard.webp"
 import "../../styles/global.css";
 
 ---
 <Layout >
     <Navbar />
+        <main class="max-w-7xl mx-auto flex flex-col px-4 gap-44 mt-32">
 
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <div class="flex flex-col gap-6">
+        <h1 class="font-Anton text-4xl lg:text-5xl leading-tight
+        bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+        bg-size-[300%_300%]
+        bg-clip-text text-transparent
+        animate-gradiente">
+          Desarrollo de sistemas a medida
+        </h1>
+
+        <p class="font-Lexend text-gray text-base leading-relaxed max-w-xl">
+          Creamos sistemas personalizados para optimizar procesos, organizar la información de tu negocio y mejorar la gestión diaria de tus operaciones.
+        </p>
+
+        <div class="flex gap-4 mt-2">
+          <a href="/contactanos"
+            class="font-Anton text-black bg-primary-light px-6 py-3 rounded-2xl
+            hover:rounded-4xl transition-all duration-500">
+            Cuéntanos tu sistema
+          </a>
+
+          <a href="#funciones"
+            class="font-Anton text-gray px-6 py-3 border border-gray-dark rounded-2xl
+            hover:border-primary-light hover:text-white transition">
+            Ver funcionalidades
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGEN -->
+      <div class="relative group">
+        <div class="absolute -inset-2 bg-primary-light/20 blur-2xl opacity-40 group-hover:opacity-60 transition"></div>
+
+        <img src={imgHero.src} 
+          alt="Sistema web a medida para empresas"
+          class="relative rounded-4xl w-full object-cover
+          transition-transform duration-700 group-hover:scale-[1.03]">
+
+        <div class="absolute inset-0 rounded-4xl bg-linear-to-t from-black/40 to-transparent"></div>
+      </div>
+
+    </section>
+
+    <!-- DIFERENCIAL -->
+    <section class="flex flex-col items-center gap-10">
+
+      <h2 class="font-Anton text-2xl text-white text-center max-w-xl">
+        Sistemas diseñados para adaptarse a tu negocio, no al revés
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl">
+
+        {
+          [
+            "Desarrollo 100% a medida y online",
+            "Adaptado a tus procesos internos",
+            "Escalable según tu crecimiento",
+            "Sin software innecesario"
+          ].map((item) => (
+
+            <div class="border border-gray-dark/40 rounded-2xl p-5
+            hover:border-primary-light/60 hover:bg-white/2 transition">
+
+              <p class="font-Lexend text-gray group-hover:text-white">
+                {item}
+              </p>
+
+            </div>
+
+          ))
+        }
+
+      </div>
+
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section id="funciones" class="flex flex-col gap-14">
+
+      <div class="flex flex-col items-center text-center gap-4 max-w-2xl mx-auto">
+        <h2 class="font-Anton text-2xl text-white">
+          Funcionalidades que podemos desarrollar
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          Cada sistema se construye según las necesidades específicas de tu negocio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        {
+          [
+            "Control de inventario",
+            "Gestión de reclamos",
+            "Panel administrativo personalizado",
+            "Gestión de usuarios y roles",
+            "Reportes y métricas en tiempo real",
+            "Automatización de procesos",
+            "Integración con APIs externas",
+            "Base de datos en tiempo real",
+            "Interfaces dinámicas",
+            "Seguridad y autenticación"
+          ].map((item, i) => (
+
+            <article class="group border border-gray-dark/40 rounded-2xl p-5 
+            flex items-center justify-between gap-4
+            transition-all duration-300 hover:border-primary-light/60">
+
+              <div class="flex items-center gap-4">
+
+                <span class="font-Anton text-lg text-primary-light">
+                  {(i + 1).toString().padStart(2, "0")}
+                </span>
+
+                <p class="font-Lexend text-gray group-hover:text-white transition">
+                  {item}
+                </p>
+
+              </div>
+
+              <span class="font-Anton text-gray group-hover:text-primary-light transition">
+                →
+              </span>
+
+            </article>
+
+          ))
+        }
+
+      </div>
+
+    </section>
+
+    <!-- TECNOLOGÍA -->
+    <section class="flex flex-col items-center gap-8 text-center max-w-3xl mx-auto">
+
+      <h2 class="font-Anton text-2xl text-white">
+        Tecnología moderna para sistemas sólidos
+      </h2>
+
+      <p class="font-Lexend text-gray">
+        Trabajamos con herramientas modernas para garantizar rendimiento, escalabilidad y seguridad.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3">
+
+        {
+          ["React", "TypeScript", "Tailwind CSS", "Supabase"].map((tech) => (
+            <span class="border border-gray-dark px-4 py-2 rounded-xl text-gray font-Lexend text-sm">
+              {tech}
+            </span>
+          ))
+        }
+
+      </div>
+
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="relative overflow-hidden rounded-2xl py-14 text-center">
+
+      <div class="absolute inset-0 bg-primary-light"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2),transparent)]"></div>
+
+      <div class="relative flex flex-col items-center gap-8 px-4">
+
+        <p class="max-w-2xl text-black font-Anton text-2xl lg:text-4xl">
+          Cuéntanos tu sistema y lo desarrollamos a tu medida
+        </p>
+
+        <a href="/contactanos"
+          class="group font-Anton text-black flex gap-4 py-4 px-12 
+          border-2 border-black rounded-2xl 
+          hover:bg-black hover:text-primary-light hover:border-transparent hover:rounded-4xl
+          transition-all duration-500">
+
+          CUÉNTANOS TU SISTEMA
+
+          <Icon name="icon-park-outline:arrow-right-up" 
+            class="size-6 rotate-45 group-hover:rotate-45 transition-transform duration-500" />
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
     <Footer />
 </Layout>

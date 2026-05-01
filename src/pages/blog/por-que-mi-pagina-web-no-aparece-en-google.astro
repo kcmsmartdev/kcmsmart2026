@@ -1,0 +1,176 @@
+---
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+---
+
+<Layout>
+  <Navbar />
+
+    <main class="max-w-4xl mx-auto flex flex-col px-4 gap-16 mt-32 mb-24">
+
+ 
+    <section class="flex flex-col gap-6">
+
+      <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284"
+        alt="Por qué mi página web no aparece en Google"
+        class="rounded-3xl w-full object-cover">
+
+      <h1 class="font-Anton text-3xl lg:text-4xl leading-tight
+      bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+      bg-size-[300%_300%]
+      bg-clip-text text-transparent
+      animate-gradiente">
+        ¿Por qué mi página web no aparece en Google?
+      </h1>
+
+      <p class="font-Lexend text-gray leading-relaxed">
+        Tener una página web no garantiza que aparezca en Google. Muchas empresas publican su sitio
+        y esperan resultados inmediatos, pero el posicionamiento requiere ciertos factores técnicos
+        y de contenido.
+      </p>
+
+      <p class="font-Lexend text-gray leading-relaxed">
+        En este artículo te explicamos las razones más comunes por las que tu web no aparece en Google
+        y qué puedes hacer para solucionarlo.
+      </p>
+
+    </section>
+
+
+    <section class="flex flex-col gap-10">
+
+      <article class="flex flex-col gap-4">
+        <h2 class="font-Anton text-xl text-white">
+          1. Tu página no está indexada
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          Si Google no conoce tu sitio, simplemente no puede mostrarlo en los resultados.
+        </p>
+
+        <p class="font-Lexend text-gray">
+          Esto ocurre cuando no has enviado tu web a Google o no tienes configurado un sitemap.
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h2 class="font-Anton text-xl text-white">
+          2. Tu sitio es muy nuevo
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          Las páginas web nuevas pueden tardar días o incluso semanas en aparecer en Google.
+        </p>
+
+        <p class="font-Lexend text-gray">
+          El buscador necesita tiempo para rastrear, analizar y posicionar el contenido.
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h2 class="font-Anton text-xl text-white">
+          3. No tienes contenido optimizado
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          Google posiciona contenido relevante. Si tu web tiene poco texto o no está optimizada
+          con palabras clave, será difícil que aparezca.
+        </p>
+
+        <p class="font-Lexend text-gray">
+          Cada página debe responder a una intención de búsqueda clara.
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h2 class="font-Anton text-xl text-white">
+          4. Problemas técnicos de SEO
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          Factores como velocidad lenta, mala estructura HTML o errores en el código
+          pueden afectar el posicionamiento.
+        </p>
+
+        <p class="font-Lexend text-gray">
+          También puede haber bloqueos en el archivo robots.txt o etiquetas que impiden la indexación.
+        </p>
+      </article>
+
+      <article class="flex flex-col gap-4">
+        <h2 class="font-Anton text-xl text-white">
+          5. No tienes enlaces ni autoridad
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          Google también evalúa la autoridad de tu sitio. Si nadie enlaza a tu web,
+          será más difícil que aparezca en los primeros resultados.
+        </p>
+
+        <p class="font-Lexend text-gray">
+          Los enlaces (internos y externos) ayudan a mejorar la visibilidad.
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="flex flex-col gap-4">
+      <h2 class="font-Anton text-xl text-white">
+        ¿Cómo hacer que tu web aparezca en Google?
+      </h2>
+
+      <ul class="flex flex-col gap-2 font-Lexend text-gray">
+        <li>→ Crear contenido útil y bien estructurado</li>
+        <li>→ Usar palabras clave relevantes</li>
+        <li>→ Optimizar velocidad y rendimiento</li>
+        <li>→ Enviar tu sitio a Google Search Console</li>
+        <li>→ Generar enlaces hacia tu web</li>
+      </ul>
+    </section>
+
+
+    <section class="flex flex-col gap-4">
+      <h2 class="font-Anton text-xl text-white">
+        Conclusión
+      </h2>
+
+      <p class="font-Lexend text-gray">
+        No aparecer en Google es más común de lo que parece y suele estar relacionado con
+        aspectos técnicos o falta de contenido optimizado.
+      </p>
+
+      <p class="font-Lexend text-gray">
+        Con una buena estructura, contenido adecuado y optimización SEO,
+        tu página puede empezar a posicionarse de forma progresiva.
+      </p>
+    </section>
+
+
+    <section class="border border-primary-light/40 rounded-2xl p-6
+    bg-linear-to-r from-primary-light/10 via-transparent to-primary-light/10 flex flex-col gap-4">
+
+      <h3 class="font-Anton text-lg text-white">
+        ¿Tu web no aparece en Google?
+      </h3>
+
+      <p class="font-Lexend text-gray text-sm">
+        En KCM SMART desarrollamos sitios web optimizados desde el inicio,
+        enfocados en rendimiento, estructura y posicionamiento.
+      </p>
+
+      <a href="/contactanos"
+        class="mt-2 w-fit inline-flex font-Anton text-gray px-5 py-2 rounded-xl border-2 border-gray-dark
+        transition-all duration-500
+        hover:bg-primary-light hover:text-black hover:border-transparent">
+        Solicitar información
+      </a>
+
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

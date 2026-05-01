@@ -1,0 +1,176 @@
+---
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+---
+
+<Layout>
+  <Navbar />
+
+  <main class="max-w-4xl mx-auto flex flex-col px-4 gap-16 mt-32 mb-24">
+
+
+      <section class="flex flex-col gap-6">
+
+        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Costo de una página web en Perú"
+          class="rounded-3xl w-full object-cover">
+
+        <h1 class="font-Anton text-3xl lg:text-4xl leading-tight
+        bg-linear-to-r from-primary-light via-primary-dark to-primary-light
+        bg-size-[300%_300%]
+        bg-clip-text text-transparent
+        animate-gradiente">
+          ¿Cuánto cuesta una página web en Perú en 2026?
+        </h1>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Una de las preguntas más comunes antes de crear un sitio web es cuánto cuesta realmente.
+          La respuesta no es única, pero sí existen rangos aproximados según el tipo de proyecto.
+        </p>
+
+        <p class="font-Lexend text-gray leading-relaxed">
+          Aquí te explicamos qué influye en el precio y cuánto podrías invertir según tus necesidades.
+        </p>
+
+      </section>
+
+      <section class="flex flex-col gap-10">
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-Anton text-xl text-white">
+            1. Tipo de página web (y precios aproximados)
+          </h2>
+
+          <p class="font-Lexend text-gray">
+            El tipo de sitio es el factor que más influye en el costo:
+          </p>
+
+          <ul class="flex flex-col gap-3 font-Lexend text-gray">
+
+            <li>
+              → <span class="text-white">Landing page:</span>  
+              <span class="text-primary-light">S/300 – S/900</span>  
+              <br class="hidden lg:block">
+              Ideal para presentar un servicio de forma clara y directa.
+            </li>
+
+            <li>
+              → <span class="text-white">Web corporativa:</span>  
+              <span class="text-primary-light">S/800 – S/2,500</span>  
+              <br class="hidden lg:block">
+              Incluye varias secciones como inicio, servicios y contacto.
+            </li>
+
+            <li>
+              → <span class="text-white">Sistema web a medida:</span>  
+              <span class="text-primary-light">S/2,500 – S/10,000+</span>  
+              <br class="hidden lg:block">
+              Desarrollo personalizado con funcionalidades avanzadas.
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-Anton text-xl text-white">
+            2. Nivel de personalización
+          </h2>
+
+          <p class="font-Lexend text-gray">
+            Los precios más bajos suelen estar relacionados con plantillas.
+            En cambio, un desarrollo a medida implica mayor inversión,
+            pero también mejor rendimiento, escalabilidad y control.
+          </p>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-Anton text-xl text-white">
+            3. Funcionalidades incluidas
+          </h2>
+
+          <p class="font-Lexend text-gray">
+            El costo aumenta según lo que necesite tu web:
+          </p>
+
+          <ul class="flex flex-col gap-2 font-Lexend text-gray">
+            <li>→ Formularios personalizados</li>
+            <li>→ Panel administrativo</li>
+            <li>→ Integraciones externas</li>
+            <li>→ Automatización de procesos</li>
+          </ul>
+        </article>
+
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-Anton text-xl text-white">
+            4. Optimización y SEO
+          </h2>
+
+          <p class="font-Lexend text-gray">
+            Una web optimizada para SEO y velocidad puede incrementar el costo,
+            pero es clave para lograr visibilidad en Google y ofrecer una buena experiencia.
+          </p>
+        </article>
+
+
+        <article class="flex flex-col gap-4">
+          <h2 class="font-Anton text-xl text-white">
+            5. Mantenimiento
+          </h2>
+
+          <p class="font-Lexend text-gray">
+            El mantenimiento puede tener un costo adicional mensual o puntual,
+            dependiendo del soporte, mejoras y actualizaciones necesarias.
+          </p>
+
+          <p class="font-Lexend text-gray">
+            En Perú, puede variar entre 
+            <span class="text-primary-light">S/50 – S/300 mensuales</span>.
+          </p>
+        </article>
+
+      </section>
+
+
+      <section class="flex flex-col gap-4">
+        <h2 class="font-Anton text-xl text-white">
+          Conclusión
+        </h2>
+
+        <p class="font-Lexend text-gray">
+          El costo de una página web en Perú dependerá de lo que realmente necesite tu negocio.
+          Más que buscar lo más barato, lo importante es invertir en una web profesional,
+          funcional y preparada para crecer contigo.
+        </p>
+      </section>
+
+    
+      <section class="border border-primary-light/40 rounded-2xl p-6
+      bg-linear-to-r from-primary-light/10 via-transparent to-primary-light/10 flex flex-col gap-4">
+
+        <h3 class="font-Anton text-lg text-white">
+          ¿Quieres una web adaptada a tu negocio?
+        </h3>
+
+        <p class="font-Lexend text-gray text-sm">
+          En KCM SMART desarrollamos soluciones a medida, enfocadas en rendimiento,
+          estructura y experiencia de usuario.
+        </p>
+
+        <a href="/contactanos"
+          class="mt-2 w-fit inline-flex font-Anton text-gray px-5 py-2 rounded-xl border-2 border-gray-dark
+          transition-all duration-500
+          hover:bg-primary-light hover:text-black hover:border-transparent">
+          Solicitar información
+        </a>
+
+      </section>
+
+  </main>
+
+  <Footer />
+</Layout>
