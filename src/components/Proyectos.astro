@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components'
 import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
+import proyecto2 from '../assets/proyectos/img-proyecto-2.webp'
+import proyecto3 from '../assets/proyectos/img-proyecto-3.webp'
 ---
 
 <div class="max-w-7xl mx-auto p-4 flex flex-col mt-32">
@@ -22,7 +24,7 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
     <div class="flex flex-col gap-10 lg:gap-6 md:flex-row md:h-auto md:contents" data-row>
 
       <!-- Tarjeta 1 -->
-      <div class="relative h-145 overflow-hidden rounded-4xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
+      <div class="relative h-145 overflow-hidden rounded-4xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2  min-w-0" data-card>
         <img
           src={proyecto1.src}
           alt="Proyecto Cuotitas"
@@ -40,15 +42,15 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
             <div class="flex flex-col gap-3">
               <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
               <p class="text-gray font-Lexend text-sm leading-relaxed">
-                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+                Aplicación web diseñada para calcular de forma rápida y precisa los intereses generados en compras realizadas en cuotas con tarjeta de crédito.
               </p>
             </div>
-            <div class="flex gap-4">
+            <div class="flex gap-5">
               <span class="text-white/85 text-xs font-Anton">Astro</span>
               <span class="text-white/85 text-xs font-Anton">Tailwind</span>
               <span class="text-white/85 text-xs font-Anton">TypeScript</span>
             </div>
-            <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
+            <a href="/https://calcularcuotasperu.lat/" target="_blank" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
               Visitar web...
               <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
             </a>
@@ -62,8 +64,8 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
       <!-- Tarjeta 2 -->
      <div class="relative h-145 overflow-hidden rounded-4xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
         <img
-          src={proyecto1.src}
-          alt="Proyecto Cuotitas"
+          src={proyecto3.src}
+          alt="Aurum Customs"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
         />
         <div
@@ -76,15 +78,17 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
             data-content
           >
             <div class="flex flex-col gap-3">
-              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
+              <h3 class="text-white font-Anton text-2xl">Aurum Customs</h3>
               <p class="text-gray font-Lexend text-sm leading-relaxed">
-                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+                Diseño y desarrollo de una web corporativa con sistema de tracking para una agencia de aduanas en Perú, optimizando el seguimiento de envíos y operaciones.
               </p>
             </div>
             <div class="flex gap-4">
               <span class="text-white/85 text-xs font-Anton">Astro</span>
+              <span class="text-white/85 text-xs font-Anton">React</span>
               <span class="text-white/85 text-xs font-Anton">Tailwind</span>
               <span class="text-white/85 text-xs font-Anton">TypeScript</span>
+
             </div>
             <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
               SABER MÁS...
@@ -104,8 +108,8 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
 
      <div class="relative h-145 overflow-hidden rounded-4xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
         <img
-          src={proyecto1.src}
-          alt="Proyecto Cuotitas"
+          src={proyecto2.src}
+          alt="Peso ideal"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
         />
         <div
@@ -118,9 +122,9 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
             data-content
           >
             <div class="flex flex-col gap-3">
-              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
+              <h3 class="text-white font-Anton text-2xl">Peso ideal</h3>
               <p class="text-gray font-Lexend text-sm leading-relaxed">
-                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
+                Aplicación web que estima el peso ideal de una persona a partir de datos como género, estatura; y a base de ello dar datos apróximados
               </p>
             </div>
             <div class="flex gap-4">
@@ -139,49 +143,14 @@ import proyecto1 from '../assets/proyectos/img-proyecto-1.webp'
         </div>
       </div>
 
-      <div class="relative h-145 overflow-hidden rounded-4xl cursor-pointer transition-[flex] duration-500 ease-in-out flex-2 min-w-0" data-card>
-        <img
-          src={proyecto1.src}
-          alt="Proyecto Cuotitas"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-60 data-[active=true]:opacity-0"
-        />
-        <div
-          class="absolute inset-0 grid opacity-100 md:opacity-0 md:data-[active=true]:opacity-100 transition-opacity duration-300
-                grid-cols-1 md:grid-cols-[1fr_0px]"
-          data-grid
-        >
-          <div
-            class="flex flex-col justify-center gap-4 p-4 lg:p-7 min-w-0 translate-y-2 data-[active=true]:translate-y-0 transition-transform duration-300 delay-150 bg-[#323232] order-2 md:order-1"
-            data-content
-          >
-            <div class="flex flex-col gap-3">
-              <h3 class="text-white font-Anton text-2xl">Cuotitas</h3>
-              <p class="text-gray font-Lexend text-sm leading-relaxed">
-                Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.
-              </p>
-            </div>
-            <div class="flex gap-4">
-              <span class="text-white/85 text-xs font-Anton">Astro</span>
-              <span class="text-white/85 text-xs font-Anton">Tailwind</span>
-              <span class="text-white/85 text-xs font-Anton">TypeScript</span>
-            </div>
-            <a href="#" class="mt-1.5 text-sm lg:text-sm group font-Anton text-black p-3 flex gap-5 items-center rounded-2xl hover:rounded-4xl bg-primary-light transform duration-700 ease-in-out">
-              SABER MÁS...
-              <Icon name="icon-park-outline:arrow-right-up" class="size-7  rotate-45 lg:rotate-0   group-hover:rotate-45 transition-transform duration-500 ease-in-out" />
-            </a>
-          </div>
-          <div class="overflow-hidden h-full order-1 md:order-2" data-image-col>
-            <img src={proyecto1.src} alt="Proyecto 3" class="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
+      
       
       
     </div>
 
   </div>
   <div class="flex justify-end mt-6">
-      <a href="/blog"
+      <a href="/nuestros-proyectos-web"
         class="font-Anton text-gray text-sm flex items-center gap-2
         group
         hover:text-primary-light transition-colors duration-300">

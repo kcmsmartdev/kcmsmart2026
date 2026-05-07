@@ -5,45 +5,37 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 import proyecto1 from "../assets/proyectos/img-proyecto-1.webp"
+import proyecto2 from "../assets/proyectos/img-proyecto-2.webp"
+import proyecto3 from "../assets/proyectos/img-proyecto-3.webp"
+import proyecto4 from "../assets/proyectos/img-proyecto-4.webp"
 import { Icon } from "astro-icon/components";
 
 const proyectos =[
     {titulo:"Cuotitas", 
-    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
-    btn:"/", 
-    img:proyecto1,
-    tec:" Astro Tailwind TypeScript"},
-    {titulo:"Cuotitas", 
-    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    des:"Aplicación web diseñada para calcular de forma rápida y precisa los intereses generados en compras realizadas en cuotas con tarjeta de crédito.", 
     btn:"/", 
     img:proyecto1,
     tec:" Astro Tailwind TypeScript"},
 
-    {titulo:"Cuotitas", 
-    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
-    btn:"/", 
-    img:proyecto1,
+    {titulo:"Peso ideal", 
+    des:"Aplicación web que estima el peso ideal de una persona a partir de datos como género, estatura; y a base de ello dar datos apróximados", 
+    btn:"http://kcmsmartdev.github.io/tupesoideal/", 
+    img:proyecto2,
     tec:" Astro Tailwind TypeScript"},
 
-    {titulo:"Cuotitas", 
-    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    {titulo:"Aurum Customs", 
+    des:"Diseño y desarrollo de una web corporativa con sistema de tracking para una agencia de aduanas en Perú, optimizando el seguimiento de envíos y operaciones. ", 
     btn:"/", 
-    img:proyecto1,
+    img:proyecto3,
     tec:" Astro Tailwind TypeScript"},
 
-
-    {titulo:"Cuotitas", 
-    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
+    {titulo:"meCrypto", 
+    des:"Sistema web para gestionar y registrar operaciones de compra y venta de criptomonedas, permitiendo un mejor control financiero de activos digitales.", 
     btn:"/", 
-    img:proyecto1,
+    img:proyecto4,
     tec:" Astro Tailwind TypeScript"},
 
-
-    {titulo:"Cuotitas", 
-    des:"Es una herramienta web diseñada para calcular de forma rápida y precisa los intereses generados al realizar compras en cuotas con tarjeta de crédito.", 
-    btn:"/", 
-    img:proyecto1,
-    tec:" Astro Tailwind TypeScript"},
+   
 ]
 
 ---
@@ -70,7 +62,7 @@ const proyectos =[
                 proyectos.map((e) => {
                 return (
 
-                    <article class="mt-12 group relative overflow-hidden rounded-2xl transition-all duration-500">
+                    <article class="mt-12 group relative overflow-hidden rounded-2xl  transition-all duration-500">
 
                     <!-- Imagen -->
                     <div class="overflow-hidden rounded-2xl">
@@ -78,7 +70,7 @@ const proyectos =[
                         src={e.img.src} 
                         alt={e.titulo}
                         loading="lazy"
-                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110   "
                         >
                     </div>
 
@@ -99,7 +91,8 @@ const proyectos =[
 
                         <!-- Botón -->
                         <a 
-                        href="#" 
+                        href={e.btn}
+                        target="_blank"
                         class="font-Anton text-gray p-3 flex gap-3 items-center justify-between rounded-2xl border-2 border-gray-dark 
                         transition-all duration-500 ease-in-out
                         group-hover:bg-primary-light 
